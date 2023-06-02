@@ -1,11 +1,22 @@
 .faq{
-  padding: 55px 0;
-  background: $white url("../img/general-block-image/bg-faq-desc.webp") no-repeat 50% 0;
-  background-size: 100%;
+  padding: 10px 0 0;
+  max-width: calc(100% - 30px);
+  @media screen and (max-width: 1024px){
+    max-width: 100%;
+    margin: 0 0 40px 0;
+  }
   &__title{
-    text-align: center;
+    display: flex;
+    align-items: center;
     color: $black-one;
     margin: 0 0 25px 0;
+    img{
+      margin: 0 15px 0 0;
+    }
+  }
+  &__container{
+    padding: 0;
+
   }
 }
 
@@ -18,29 +29,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: $font-popins-semb;
-  padding: 12px 25px 10px 25px;
-  border-radius: 8px;
-  background: $pink;
-  font-size: 20px;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: $black-one;
+  font-family: $font-firs-reg;
+  padding: 23px 30px 20px 30px;
+  border-radius: 20px;
+  background: $white;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  color: $blue-dark;
   cursor: pointer;
-  transition: background-color $transition;
+  transition: $transition;
   &::after {
     display: inline-block;
-    margin: 0 0 0 25px;
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
+    margin: 0 0 0 30px;
+    width: 14px;
+    height: 9px;
+    min-width: 14px;
+    min-height: 9px;
     border-radius: 8px;
-    background: $burgundyBtn url("../img/general-block-image/polygon-faq.svg") no-repeat center;
-    background-size: 11px 7px;
-    box-shadow: $boxShadowBtn;
+    background: url("../img/general-block-image/polygon-faq.svg") no-repeat center;
+    background-size: 14px 9px;
     content: "";
-
+    transition: $transition;
   }
 }
 
@@ -49,19 +59,21 @@
   border: none;
 }
 
-.accordion__header:hover {
-    background-color: $pink-hover;
-  }
+//.accordion__header:hover {
+//    background-color: $grey-btn;
+//  }
 
 .accordion__content {
   display: flex;
   flex-direction: column;
-  padding: 25px 25px 15px 25px;
-  background: transparent;
+  border-radius: 0 0 20px 20px;
+  margin: 2px 0 0 0;
+  padding: 20px 20px 30px 30px;
+  background: $white;
   p{
     font-size: 15px;
-    line-height: 30px;
-    color: $black-one;
+    line-height: 25px;
+    color: $blue-dark;
     &:not(:last-child){
       margin: 0 0 20px 0;
     }
@@ -72,33 +84,40 @@
   display: none;
 }
 
-@media screen and (max-width: 600px){
+.accordion__item_show .accordion__header::after, .accordion__item_slidedown .accordion__header::after {
+  transform:  rotate(-180deg);
+}
+
+.accordion__item_slidedown .accordion__header, .accordion__item_show .accordion__header {
+  border-radius: 20px 20px 0 0;
+}
+
+@media screen and (max-width: 650px){
   .faq{
-    padding: 50px 0 30px 0;
-    background: $white;
+    width: calc(100% - 30px);
+    margin: 0 auto 30px auto;
     &__container{
       padding: 0;
     }
     &__title{
       margin: 0 0 20px 0;
-      padding: 0 15px;
     }
   }
 
   .accordion__header{
-    border-radius: 0;
-    padding: 19px 14px 17px;
-    font-size: 14px;
+    padding: 17px 20px 17px 20px;
+    font-size: 15px;
     line-height: 21px;
   }
 
   .accordion__content {
-    padding: 15px 15px 10px 15px;
+    padding: 15px 20px;
+
     p{
-      font-size: 12px;
-      line-height: 26px;
+      font-size: 13px;
+      line-height: 20px;
       &:not(:last-child){
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
       }
     }
   }

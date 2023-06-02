@@ -1,14 +1,62 @@
 .subscribe{
-  padding: 70px 0 90px 0;
-  background: $burgundy url("../img/general-block-image/subscribe/bg-sub-desc.webp") no-repeat 50% 0/cover;
+  padding: 130px 0;
+  position: relative;
+  margin-top: -50px;
+  background: $back-body url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 0/cover;
+  @media screen and (max-width: 1024px){
+    background: $back-body url("../img/home/casino/bg-tab-test.webp") no-repeat 50% 0/cover;
+  }
+  @media screen and (max-width: 650px){
+    background: $back-body url("../img/home/casino/bg-mob-test.webp") no-repeat 50% 0/cover;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(180deg, #0B0B19 0%, rgba(11, 11, 25, 0) 100%);
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    transform: scale(1, -1);
+    background: linear-gradient(180deg, #0B0B19 0%, rgba(11, 11, 25, 0) 100%);
+  }
 
-  &__row{
-    max-width: 580px;
+
+
+  &__container{
+    position: relative;
+    z-index: 10;
   }
+
   &__title{
+    max-width: 900px;
+    font-family: $font-firs-semb;
+    font-size: 42px;
+    line-height: 80px;
     color: $white;
-    margin: 0 0 10px 0;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 40px auto;
+    span{
+      display: inline-block;
+      font-style: italic;
+      background: $blue;
+      padding: 13px 30px 12px 26px;
+      border-radius: 100px;
+      font-size: 38px;
+      line-height: 39px;
+    }
   }
+
   &__text{
     font-size: 15px;
     line-height: 22px;
@@ -16,41 +64,63 @@
     margin: 0 0 30px 0;
   }
 
+  &__row{
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    margin: 0 auto 0 auto;
+  }
+
   &__form{
     margin: 0 0 5px 0;
     &-wrap{
-      max-width: 460px;
+      margin: 0 0 5px 0;
+      display: flex;
+      align-items: center;
+      min-width: 100% ;
       position: relative;
+      border-radius: 14px;
+      padding: 15px;
+      background: $grey-email;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     }
   }
   &__email{
-    width: 100%;
+
+    flex: 1 1 auto;
+    display: inline-block;
+    padding: 12px 24px;
+    background: $grey-white-bg;
+    box-shadow: inset 0px 0px 14px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 8px;
-    background: $white;
-    padding: 10px 19px 8px;
-    font-family: $font-popins-reg;
+    margin: 0 8px 0 0;
+    color: $white;
     font-size: 15px;
     line-height: 30px;
     &::placeholder{
-      font-size: 15px;
-      line-height: 30px;
-      color: $black-one;
+      font-size: 14px;
+      line-height: 20px;
+      color: $grey-text;
     }
   }
   &__submit{
-    padding: 12px 25px 10px;
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-family: $font-firs-semb;
+    padding: 18px 28px 16px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
   }
   &__info{
+    align-self: flex-end;
     max-width: 490px;
     color: $white;
     font-size: 13px;
     line-height: 17px;
     &-link{
-      font-family: $font-popins-semb;
+      font-family: $font-firs-semb;
       color: $white;
       white-space: nowrap;
       text-decoration: underline;
@@ -59,13 +129,18 @@
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 650px){
   .subscribe{
-    padding: 50px 0 200px 0;
-    background: $burgundy-sub-bg url("../img/general-block-image/subscribe/bg-sub-mob.webp") no-repeat 50% 100%/100%;
+    padding: 89px 0;
     &__title{
+      font-size: 32px;
+      line-height: 48px;
       text-align: center;
-      margin: 0 0 10px 0;
+      margin: 0 0 25px 0;
+      span{
+        font-size: 24px;
+        line-height: 23px;
+      }
     }
     &__text{
       text-align: center;
@@ -75,6 +150,8 @@
     }
     &__form{
       &-wrap{
+        padding: 0;
+        background: transparent;
         max-width: 100%;
         display: flex;
         flex-direction: column;
@@ -82,17 +159,20 @@
     }
 
     &__email{
+      min-width: 100%;
       margin: 0 0 15px 0;
       display: inline-block;
+      //margin: 0 0 10px 0;
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: inset 0px 0px 14px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(162, 155, 171, 0.22);
     }
     &__submit{
+      min-width: 100%;
       display: inline-block;
-      position: static;
-      align-self: center;
-      transform: translateY(0);
     }
     &__info{
-      text-align: center;
+      align-self: flex-start;
     }
   }
 }

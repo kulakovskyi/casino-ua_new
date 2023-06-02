@@ -1,128 +1,318 @@
-.casino{
-  padding: 140px 0 140px 0;
-  background: $burgundy url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 70%/cover;
-
-  &__row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.casino {
+  padding: 240px 0 140px 0;
+  background: $back-body url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 0/cover;
+  @media screen and (max-width: 1024px){
+    background: $back-body url("../img/home/casino/bg-tab-test.webp") no-repeat 50% 0/cover;
   }
-  &__info{
+  @media screen and (max-width: 650px){
+    background: $back-body url("../img/home/casino/bg-mob-test.webp") no-repeat 50% 0/cover;
+  }
+
+  &__title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
-  &__title{
-    font-family: $font-popins-semb;
-    font-size: 38px;
-    line-height: 54px;
-    color: $white-grey;
-    margin: 0 0 30px 0;
-    max-width: 420px;
-  }
-  &__link{
-    display: inline-block;
-    padding: 18px 32px 16px;
-    cursor: pointer;
-  }
-  &__item{
-    display: flex;
     align-items: center;
-    width: 335px;
-    &:not(:last-child){
-      margin: 0 0 15px 0;
+    font-family: $font-firs-reg;
+    font-size: 54px;
+    line-height: 60px;
+    color: $white;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+
+    &-top {
+      margin: 0 0 25px 0;
+
+      span {
+        margin: 0 18px 0 0;
+        border-radius: 100px;
+        font-family: $font-firs-reg;
+        font-size: 42px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 17px 34px 13px;
+        background: $blue;
+        font-style: italic;
+        color: $white;
+      }
     }
-    &-image{
-      max-width: 105px;
-      margin: 0 15px 0 0;
-      min-width: 105px;
+  }
+
+  &__row {
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 12px 45px 25px;
+    background: $grey-white-bg-3;
+    margin: 0 auto 50px auto;
+    max-width: 980px;
+  }
+
+  &__item {
+    max-width: 100px;
+    position: relative;
+    &-link{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    &::before {
+      position: absolute;
+      width: 1px;
+      height: 40px;
+      right: -15px;
+      top: 35px;
+      background: $grey-white-bg-4;
+
+    }
+
+    &:not(:last-child) {
+      margin: 0 30px 0 0;
+
+      &::before {
+        content: '';
+      }
+    }
+
+    &-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100px;
+      min-width: 100px;
+      min-height: 100px;
+      max-height: 100px;
+      transition: transform .3s ease;
+    }
+    &:hover &-img{
+      transform: scale(1.1);
+    }
+
+    &:hover &-text{
+      color: $white-hover;
+    }
+
+    &-text {
+      font-family: $font-firs-reg;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: $white;
+      transition: color .3s ease;
+    }
+  }
+
+  &__game {
+    max-width: 1075px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    &-item{
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      max-width: 345px;
+      padding: 10px;
+      border-radius: 14px;
+      background: $grey-white-bg-3;
+    }
+    &-img{
+      width: 72px;
+      height: 40px;
+      margin: 0 10px 0 0;
       img{
-        border-radius: 8px;
+        max-width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
       }
     }
     &-info{
       flex: 1 1 auto;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      margin: 0 15px 0 0;
+      margin:0 10px 0 0;
     }
-    &-title{
-      font-size: 14px;
-      line-height: 21px;
-      letter-spacing: -0.004em;
+    &-name{
+      font-family: $font-firs-reg;
+      font-size: 17px;
+      line-height: 22px;
       color: $white;
     }
-    &-reviews{
+
+    &-grade{
       display: flex;
       align-items: center;
-      &-img{
-        display: inline-block;
-        margin: 0 5px 0 0;
-      }
-      &-grade{
-        font-family: $font-popins-reg;
-        font-size: 12px;
-        line-height: 18px;
-        color: $grey;
+      font-size: 11px;
+      line-height: 15px;
+      letter-spacing: .02em;
+      color: $grey-text;
+      img{
+        margin: -1.5px 5px 0 0;
       }
     }
     &-link{
       display: inline-block;
-      padding: 7px 17px 5px;
-      font-family: $font-popins-reg;
-      font-size: 13px;
-      line-height: 20px;
-      white-space: nowrap;
+      padding: 9px 14px;
+      font-size: 14px;
+    }
+  }
 
+}
+
+@media screen and (max-width: 1024px) {
+  .casino{
+    padding: 180px 0 105px 0;
+    &__container{
+      padding: 0;
+    }
+    &__title{
+      padding: 0 15px;
+      font-size: 49px;
+      line-height: 58px;
+      &-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+          font-size: 37px;
+          line-height: 34px;
+          align-self: flex-start;
+          margin: 0 0 20px 0;
+        }
+      }
+      &-bottom{
+        text-align: center;
+      }
+    }
+    &__row{
+      min-width: 980px;
+      &-wrap{
+        padding: 0 15px;
+        overflow-x: scroll;
+      }
+    }
+    &__game{
+      padding: 0 15px;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
 
-@media screen and (max-width: 830px){
+@media screen and (max-width: 650px) {
   .casino{
-    padding: 85% 0 50px 0;
-    background: #2C0715 url("../img/home/casino/bg-tab-test.webp") no-repeat;
-    background-size: cover;
-    background-position: 50% 0;
-    &__row{
+    padding: 124px 0 105px 0;
+    &__item{
+      display: flex;
       flex-direction: column;
       align-items: center;
+      &:not(:last-child){
+        margin: 0 45px 0 0;
+        &::before{
+          top: 12px;
+          right: -25px;
+        }
+      }
+      &-img{
+        max-width: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        max-height: 40px;
+        margin: 0 0 10px 0;
+      }
+      &-text{
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
-    &__info{
+    &__row{
+      border-radius: 24px;
+      padding: 21px 26px 15px;
       margin: 0 0 40px 0;
-      align-items: center;
+      min-width: 760px;
     }
     &__title{
+      font-size: 38px;
+      line-height: 48px;
       text-align: center;
-      max-width: 480px;
+      margin: 0 0 40px 0;
+      &-top{
+        margin: 0 0 5px 0;
+        span{
+          font-size: 28px;
+          line-height: 40px;
+          padding: 5px 24px 3px;
+          margin: 0 0 17px 0;
+        }
+      }
     }
-    &__item{
-      width: 445px;
+    &__game{
+      grid-template-columns: 1fr;
+      line-grid-progression: 20px;
+      &-item{
+        padding: 0;
+        background: transparent;
+        &-img{
+          min-width: 72px;
+          max-width: 72px;
+
+          margin: 0 14px 0 0;
+          img{
+            border-radius: 7px;
+          }
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px) {
   .casino{
-    background: #2C0715  url("../img/home/casino/bg-mob-test.webp") no-repeat ;
-    background-size: 100%;
-    padding: 100% 0 40px 0;
-
     &__title{
-      font-size: 28px;
-      line-height: 44px;
-      text-align: center;
-      max-width: 100%;
-      margin: 0 0 20px 0;
-    }
-    &__list{
-      width: 100%;
-    }
-    &__item{
-      width: 100%;
+      font-size: 34px;
+      line-height: 45px;
+      margin: 0 0 30px 0;
+      &-top{
+        margin: 0;
+        span{
+          font-size: 24px;
+          line-height: 35px;
+          padding: 5px 20px 3px;
+          margin: 0px 0 12px 0;
+
+        }
+
+      }
     }
   }
 }
+
+@media screen and (max-width: 358px) {
+  .casino{
+    &__title{
+      font-size: 30px;
+      line-height: 41px;
+      margin: 0 0 20px 0;
+      &-top{
+        span{
+          font-size: 24px;
+          line-height: 35px;
+          padding: 5px 20px 3px;
+          margin: 0px 0 12px 0;
+
+        }
+
+      }
+    }
+  }
+}
+
 
 

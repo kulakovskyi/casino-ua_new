@@ -21,16 +21,7 @@
   }
 }
 
-.grey-btn{
-  border-radius: 8px;
-  color: $white;
-  background: $greyBtn;
-  box-shadow: $boxShadowBtn;
-  transition: background-color $transition;
-  &:hover{
-    background: $greyBtn-hover;
-  }
-}
+
 
 .grey-btn-two{
   border-radius: 8px;
@@ -42,4 +33,38 @@
     background: $orangeBtn-hover;
   }
 }
+
+.blue-btn{
+  border-radius: 8px;
+  background: $blue;
+  color: $white;
+  transition: background-color $transition;
+  &:hover{
+    background: $blue-hover;
+  }
+}
+
+.blue-btn-transparent{
+  border: 2px solid $blue;
+  border-radius: 8px;
+  background: transparent;
+  color: $blue;
+  transition: background-color $transition, border-color $transition, color $transition;
+  &:hover{
+    border: 2px solid $blue-hover;
+    background: $blue-hover;
+    color: $white;
+  }
+}
+
+.grey-btn{
+  border-radius: 8px;
+  color: $blue;
+  background: $grey-btn;
+  transition: background-color $transition;
+  &:hover{
+    background: $grey-btn-hover;
+  }
+}
+
 

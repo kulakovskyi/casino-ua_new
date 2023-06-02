@@ -8,17 +8,18 @@
     @include('partials/general-block/header.html')
     <main class="main">
         @include('partials/home/casino.html')
-        @include('partials/home/best.html')
-        @include('partials/home/slot.html')
-        @include('partials/home/bonus.html')
-        @include('partials/home/blog.html')
-        @include('partials/home/top.html')
-        @include('partials/home/news.html')
-        @include('partials/home/deposit.html')
-        @include('partials/general-block/faq.html')
-        @include('partials/general-block/author.html')
-        @include('partials/general-block/subscribe.html')
-
+        <div class="blocks__main-wrap">
+            @include('partials/home/best.html')
+        </div>
+            @include('partials/home/authomat.html')
+        <div class="blocks__main-wrap">
+            @include('partials/home/slot.html')
+        </div>
+            @include('partials/home/bonus.html')
+        <div class="blocks__main-wrap">
+            @include('partials/home/news.html')
+        </div>
+            @include('partials/general-block/subscribe.html')
     </main>
     @include('partials/general-block/footer.html')
 </div>
