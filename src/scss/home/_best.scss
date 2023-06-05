@@ -24,7 +24,7 @@
   &__text {
     font-size: 15px;
     line-height: 22px;
-    color: $grey-text;
+    color: $grey-footer;
     max-width: 940px;
     margin: 0 0 15px 0;
   }
@@ -58,13 +58,13 @@
       transition: background-color $transition, color $transition, box-shadow $transition;
 
       &:hover {
-        color: $blue;
-        background: $blue-btn;
+        color: $white;
+        background: $blue;
       }
 
       &._active {
-        color: $blue;
-        background: $blue-btn;
+        color: $white;
+        background: $blue;
       }
 
     }

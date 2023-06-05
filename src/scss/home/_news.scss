@@ -25,7 +25,7 @@
     padding: 0 15px;
     font-size: 15px;
     line-height: 22px;
-    color: $grey-text;
+    color: $grey-footer;
     max-width: 940px;
     margin: 0 0 15px 0;
   }
@@ -173,15 +173,15 @@
       }
 
       &:hover {
-        background: $blue-btn;
-        color: $blue;
+        color: $white;
+        background: $blue;
       }
 
       &-one,
       &-two {
         &._active {
-          background: $blue-btn;
-          color: $blue;
+          color: $white;
+          background: $blue;
         }
       }
 

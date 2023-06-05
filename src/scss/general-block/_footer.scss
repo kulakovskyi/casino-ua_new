@@ -140,7 +140,7 @@
     font-family: $font-firs-reg;
     font-size: 13px;
     line-height: 20px;
-    color: $grey-footer-text;
+    color: $white;
     margin-left: 30px;
     a{
       color: $white;
@@ -182,13 +182,14 @@
     position: fixed;
     width: 80%;
     padding: 20px 40px;
-    background: $black-footer-cookie;
+    background: $back;
     z-index: 10;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
-    display: flex;
+    //display: flex;
+    display: none;
     align-items: center;
 
     &._hidden {

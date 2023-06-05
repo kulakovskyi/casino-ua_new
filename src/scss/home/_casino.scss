@@ -234,9 +234,14 @@
     }
     &__row{
       border-radius: 24px;
-      padding: 21px 26px 15px;
-      margin: 0 0 40px 0;
-      min-width: 760px;
+      padding: 21px 28px 15px;
+      margin: 0 auto 40px auto;
+      min-width: 800px;
+      max-width: calc(100% - 30px);
+
+      &-wrap{
+
+      }
     }
     &__title{
       font-size: 38px;
