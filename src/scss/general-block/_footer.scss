@@ -165,9 +165,9 @@
     width: 100%;
     background: $white;
     color: black;
-    height: 15vh;
+    height: 160px;
     padding: 15px;
-    font-size: 36px;
+    font-size: 40px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -249,6 +249,7 @@
   .footer{
     padding: 45px 0 0 0;
     &__legal{
+      height: 140px;
       font-size: 24px;
       line-height: 40px;
     }

@@ -1,28 +1,180 @@
-.casino{
-  padding: 8px 0 25px 0;
-  background: $white;
+.casino {
+  padding: 140px 0 50px;
+  position: relative;
+  background: $back-body url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 0/cover;
+  @media screen and (max-width: 1024px){
+    background: $back-body url("../img/home/casino/bg-tab-test.webp") no-repeat 50% 0/cover;
+  }
+  @media screen and (max-width: 650px){
+    background: $back-body url("../img/home/casino/bg-mob-test.webp") no-repeat 50% 0/cover;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    transform: scale(1, -1);
+    background: linear-gradient(180deg, #0B0B19 0%, rgba(11, 11, 25, 0) 100%);
+  }
+  &__container{
+    padding: 5px 15px 45px 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__info{
+    display: flex;
+    align-items: center;
+    max-width: 880px;
+    margin: 0 20px 0 0;
+    &-img{
+      max-width: 320px;
+      min-width: 320px;
+      margin: 0 25px 0 0;
+      img{
+        min-width: 100%;
+        border-radius: 14px;
+      }
+    }
+    &-name{
+      font-family: $font-firs-semb;
+      color: $white;
+      font-size: 34px;
+      line-height: 36px;
+      letter-spacing: 0.01em;
+      margin: 0 0 10px 0;
+    }
+    &-rating{
+      display: flex;
+      align-items: center;
+      margin: 0 0 20px 0;
+      &-star{
+        display: flex;
+        align-items: center;
+        margin: 0 10px 0 0;
+        .star{
+          width: 15px;
+          height: 14px;
+          background: url("../img/page3/casino/star.svg") no-repeat center/contain;
+          &:not(:last-child){
+            margin: 0 5px 0 0;
+          }
+        }
+      }
+      &-text{
+        font-size: 13px;
+        line-height: 14px;
+        color: $white;
+      }
+    }
+    &-btns{
+      display: flex;
+    }
+    &-link{
+      margin: 0 10px 0 0;
+      display: inline-block;
+      padding: 15px 48px 14px;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    &-like{
+      position: relative;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $grey-white-bg-3 url("../img/general-block-image/like-one.svg") no-repeat center/ 21px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      &._active::after{
+        opacity: 1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 8px;
+        background: $grey-white-bg-3 url("../img/general-block-image/like-two.svg") no-repeat center/ 21px 18px;
+        transition: opacity $transition;
+
+      }
+    }
+  }
+
+  &__bonus{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+
+    &-info{
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px 0;
+      &-text{
+        font-size: 15px;
+        line-height: 10px;
+        letter-spacing: 0.01em;
+        color: $white;
+        margin: 0 15px 0 0;
+      }
+      &-img{
+        max-width: 75px;
+        img{
+          border-radius: 8px;
+        }
+      }
+    }
+    &-date{
+      display: flex;
+      align-items: center;
+      color: $white;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.004em;
+      &-item{
+        span{
+          color: $white;
+        }
+        &:not(:last-child){
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
 
   &__breadcrumbs {
     display: flex;
     align-items: center;
-    align-items: center;
-    margin: 0 0 10px 0;
+    margin: 0 0 25px 0;
+    overflow-x: scroll;
 
     &-link {
+      white-space: nowrap;
       display: inline-block;
       position: relative;
       font-size: 12px;
       line-height: 20px;
-      color: $black-one;
+      color: $white;
       transition: color $transition;
 
       &:hover {
-        color: $grey;
+        color: $white-hover;
       }
 
       &:last-child{
+        cursor: default;
         &:hover{
-          color: $black-one;
+          color: $white;
         }
       }
 
@@ -34,7 +186,7 @@
           position: absolute;
           font-size: 12px;
           line-height: 20px;
-          color: $grey;
+          color: $white;
           right: -11px;
           top: 50%;
           transform: translateY(-50%);
@@ -43,291 +195,136 @@
     }
   }
 
+
+
   &__row{
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
   }
 
-  &__info{
-    display: grid;
-    grid-template-columns: 325px auto;
-    grid-template-rows: auto auto auto;
-    justify-items: start;
-    column-gap: 30px;
-    &-image{
-      max-width: 325px;
-      grid-column: 1/2;
-      grid-row: 1/4;
-      img{
-        border-radius: 8px;
-      }
-    }
-    &-wrap{
-      display: flex;
-      align-items: center;
-      margin: 0 0 4px 0;
-    }
-    &-title{
-      font-family: $font-popins-semb;
-      font-size: 22px;
-      line-height: 33px;
-      margin: 0 20px 0 0;
-      color: $grey-tabs;
-    }
-    &-licensed{
-      display: flex;
-      align-items: center;
-      color: $blue;
-      font-size: 12px;
-      line-height: 15px;
-      letter-spacing: -0.004em;
-      &-one{
-        margin: 0 8px 0 0;
-      }
-    }
-    &-reviews{
-      align-self: start;
-      padding: 8px 17px;
-      background: $pink;
-      border-radius: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 0 0 15px 0;
 
-
-      &-star,
-      &-comment{
-        display: flex;
-        align-items: center;
-        img{
-          display: inline-block;
-          margin: 0 6px 0 0;
-        }
-      }
-      &-comment{
-        display: none;
-        margin: 0 0 0 12px;
-      }
-      &-text{
-        font-size: 12px;
-        line-height: 12px;
-        color: $black-one;
-      }
-    }
-    &-buttons{
-      display: flex;
-      align-items: flex-start;
-    }
-    &-btn_play{
-      display: inline-block;
-      padding: 12px 70px 10px;
-      font-size: 15px;
-      line-height: 20px;
-      margin: 0 10px 0 0;
-    }
-    &-btn_like{
-      display: none;
-      //display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-    }
-  }
-
-  &__create{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    &-date{
-      font-size: 13px;
-      line-height: 22px;
-      text-align: end;
-      color: $grey-tabs;
-      margin: 0 0 13px 0;
-      &-created{
-        margin: 0 0 8px 0;
-      }
-    }
-    &-from{
-      display: flex;
-      align-items: center;
-      &-text{
-        max-width: 95px;
-        margin: 0 17px 0 0;
-        font-size: 15px;
-        line-height: 20px;
-        text-align: end;
-        letter-spacing: -0.01em;
-        color: $grey-tabs;
-      }
-      &-image{
-        max-width: 142px;
-        img{
-          border-radius: 8px ;
-        }
-      }
-    }
-  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
   .casino{
+    &__info{
+      margin: 0 0 30px 0;
+    }
+    &__bonus{
+      align-items: flex-start;
+      align-self: flex-start;
+    }
     &__row{
       flex-direction: column;
-      align-items: stretch;
+      align-items: flex-start;
     }
+  }
+}
 
+@media screen and (max-width: 1024px){
+  .casino{
+    padding: 101px 0 50px;
+    &::after{
+      content: none;
+    }
     &__info{
+      &-img{
+        max-width: 280px;
+        min-width: 280px;
+      }
+    }
+    &__container{
+      padding: 0;
+    }
+    &__breadcrumbs{
+      padding: 0 15px;
       margin: 0 0 15px 0;
     }
-    &__create{
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      margin: 0 0 20px 0;
+    &__row{
+      padding: 0 15px;
+      margin: 0 0 15px 0;
+    }
+    &__bonus{
+      align-items: center;
+      align-self: flex-start;
+      flex-direction: row;
+      &-info{
+        margin: 0 15px 0 0;
+      }
       &-date{
-        font-size: 11px;
-        line-height: 14px;
         display: flex;
-        margin: 0;
-        &-created{
-          margin: 0 15px 0 0;
-        }
-      }
-      &-from{
-        flex-direction: row-reverse;
-        &-text{
-          margin: 0 0 0 15px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .casino{
-    &__info{
-      display: grid;
-      grid-template-columns: 280px auto;
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .casino {
-    padding: 8px 0 20px 0;
-    &__info{
-      grid-template-columns: 145px auto;
-      grid-template-rows: auto auto auto auto;
-      column-gap: 15px;
-      margin: 0 0 13px 0;
-      &-btn_play{
-        padding: 12px 40px 10px;
-      }
-      &-wrap{
         flex-direction: column;
         align-items: flex-start;
-      }
-      &-title{
-        font-size: 17px;
-        line-height: 24px;
-        margin: 0 0 2px 0;
-      }
-      &-licensed{
-        font-size: 11px;
-        line-height: 15px;
-      }
-      &-reviews{
-        border-radius: 0;
-        padding: 0;
-        background: transparent;
-        margin: 0;
-      }
-      &-image{
-        grid-column: 1/2;
-        grid-row: 1/3;
-      }
-      &-buttons{
-        margin-top: 2px;
-        grid-column: 1/3;
-        grid-row: 3/4;
-        align-items: stretch;
-      }
-      &-btn_play{
-        font-size: 13px;
-        line-height: 20px;
-      }
-      &-btn_like{
-        width: 44px;
-        height: 44px;
-      }
-    }
-
-    &__create{
-      margin: 0 0 17px 0;
-      &-from{
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        &-image{
-          max-width: 70px;
-        }
-        &-text{
-          max-width: 100px;
-          margin: 5px 0 0 0;
-          font-size: 12px;
-          line-height: 14px;
-        }
-      }
-      &-date{
-        font-size: 11px;
-        line-height: 14px;
-        display: flex;
-        &-created{
-          margin: 0 15px 0 0;
+        &-item{
+          &:not(:last-child){
+            margin: 0 0 5px 0;
+          }
         }
       }
     }
+  }
+}
 
+@media screen and (max-width: 650px) {
+  .casino {
     &__breadcrumbs {
       margin: 0 0 10px 0;
-
       &-link {
         font-size: 12px;
         line-height: 20px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .casino {
+    &__row{
+      align-items: center;
+    }
     &__info{
-      display: grid;
-      grid-template-columns: 100px auto;
-      grid-template-rows: auto auto;
-      row-gap: 7px;
-      &-btn_play{
-        padding: 12px 40px 10px;
+      min-width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 100%;
+      margin: 0 0 15px 0;
+      &-check{
+        top: 25px;
       }
-      &-image{
-        grid-column: 1/2;
-        grid-row: 1/2;
+
+      &-img{
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 0 15px 0;
       }
-      &-reviews{
-        grid-column: 1/3;
-        margin: 0;
+      &-name{
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+      }
+      &-rating{
+        justify-content: center;
+      }
+      &-link{
+        flex: 1 1 auto;
+        padding: 15px 15px 14px;
+        font-size: 15px;
       }
     }
+    &__bonus{
+      flex-direction: column;
+      align-items: center;
+      justify-content: stretch;
+      min-width: 100%;
 
-    &__create{
+      &-info{
+        margin: 0 0 10px 0;
+      }
+
       &-date{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        &-created{
-          margin: 0 0 10px 0;
+        align-self: center;
+        &-item{
+          &:not(:last-child){
+            margin: 0 0 10px 0;
+          }
         }
       }
     }

@@ -2,12 +2,17 @@
 @import "vars";
 @import "mixins";
 
-//main
-@import "page8/_pay";
-@import "page3/_news";
-@import "page3/_faq";
-@import "general-block/_author-aside.scss";
 
+
+//main
+@import "page8/_review";
+@import "page8/_pay";
+
+@import "page3/_news";
+@import "page5/_found";
+
+@import "general-block/_author-aside";
+@import "general-block/_faq-aside-left";
 
 @import "general-block/_subscribe.scss";
 @import "general-block/_footer.scss";

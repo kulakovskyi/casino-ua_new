@@ -1,28 +1,24 @@
 //Реализация бургер-меню
 import { burger } from './functions/burger';
 
-//header input
-import { inputComponent } from './components/inputHeaderComponent';
-
-//Footer cookie
-//import { footerCookie } from './components/footerCookieComponent';
-
-//btn scrollTop
-import { scrollTop } from './components/scrollTopComponent';
+// Dynamic Adaptive
+import { dynamicAdaptive } from './components/dynamicAdaptive.js';
 
 //Acordeon
 import { accorderon } from './functions/accorderon';
 
-//blocks
-//import { progressBar } from './components/page3/progressBarComponent';
+//Footer cookie
+import { footerCookie } from './components/footerCookieComponent';
+
+//btn scrollTop
+import { scrollTop } from './components/scrollTopComponent';
+
+//News Tabs sticky
+import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
 
 // Реализация скрола по якорю
 import { scrollAnchors } from './functions/scrollAnchors';
 
-//News Tabs
-import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
 
-//shorts
-import { mobBtnBestCasino } from './components/shortComponents/short1-component.js';
-import { btnInfo } from './components/shortComponents/short2-component.js';
-import { btnCard } from './components/shortComponents/short7-component.js';
+
+

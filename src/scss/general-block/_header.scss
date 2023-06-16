@@ -73,6 +73,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 20;
   &__top{
     padding: 21px 0 20px;
     background-color: $black-menu-white;
@@ -401,13 +402,13 @@
 
 @media screen and (max-width: 1024px) {
    .header{
-
+    z-index: auto;
      &__top{
        width: calc(100% - 30px);
        position: absolute;
        padding: 12px 0;
        z-index: 130;
-       top: 15px;
+       top: 25px;
        left: 50%;
        transform: translateX(-50%);
        border-radius: 20px;
@@ -416,7 +417,7 @@
 
      &__bottom{
 
-       padding: 93px 0 0;
+       padding: 105px 0 0;
        overflow-y: scroll;
        position: fixed;
        width: 100%;

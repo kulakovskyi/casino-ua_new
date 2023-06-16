@@ -6,12 +6,18 @@
 
 
 //main
+@import "page5/_game";
+@import "general-block/_legal";
+@import "page3/_news";
+@import "page5/_found";
 @import "page5/_rtp";
-@import "page5/_news";
-@import "page5/_slots";
+@import "page3/_games";
 
-@import "page3/_faq";
-@import "general-block/_author-aside.scss";
+@import "general-block/_author-aside";
+@import "general-block/_feedback";
+@import "general-block/_leave";
+@import "general-block/_login-aside";
+@import "general-block/_faq-aside-left";
 
 @import "general-block/_subscribe.scss";
 @import "general-block/_footer.scss";

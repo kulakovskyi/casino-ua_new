@@ -1,0 +1,134 @@
+.faq {
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    margin: 0 0 40px 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    color: $black-one;
+    margin: 0 0 25px 0;
+
+    img {
+      margin: 0 15px 0 0;
+    }
+  }
+
+  &__container {
+    padding: 0;
+
+  }
+}
+
+.accordion__item {
+  &:not(:last-child) {
+    margin: 0 0 10px 0;
+  }
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-firs-reg;
+  padding: 23px 30px 20px 30px;
+  border-radius: 20px;
+  background: $white;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  color: $blue-dark;
+  cursor: pointer;
+  transition: $transition;
+
+  &::after {
+    display: inline-block;
+    margin: 0 0 0 30px;
+    width: 14px;
+    height: 9px;
+    min-width: 14px;
+    min-height: 9px;
+    border-radius: 8px;
+    background: url("../img/general-block-image/polygon-faq.svg") no-repeat center;
+    background-size: 14px 9px;
+    content: "";
+    transition: $transition;
+  }
+}
+
+.accordion__item_slidedown .accordion__header,
+.accordion__item_show .accordion__header {
+  border: none;
+}
+
+//.accordion__header:hover {
+//    background-color: $grey-btn;
+//  }
+
+.accordion__content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 20px 20px;
+  margin: 2px 0 0 0;
+  padding: 20px 20px 30px 30px;
+  background: $white;
+
+  p {
+    font-size: 15px;
+    line-height: 25px;
+    color: $blue-dark;
+
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none;
+}
+
+.accordion__item_show .accordion__header::after, .accordion__item_slidedown .accordion__header::after {
+  transform: rotate(-180deg);
+}
+
+.accordion__item_slidedown .accordion__header, .accordion__item_show .accordion__header {
+  border-radius: 20px 20px 0 0;
+}
+
+@media screen and (max-width: 650px) {
+  .faq {
+    margin: 0 15px 30px 15px;
+    width: calc(100% - 30px);
+
+
+    &__container {
+      padding: 0;
+    }
+
+    &__title {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .accordion__header {
+    padding: 17px 20px 17px 20px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .accordion__content {
+    padding: 15px 20px;
+
+    p {
+      font-size: 13px;
+      line-height: 20px;
+
+      &:not(:last-child) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+}

@@ -1,94 +1,53 @@
 .ratings {
-  padding: 30px;
-  background: $white;
-  border-radius: 8px;
+  padding: 50px;
   margin: 0 0 20px 0;
+  background: $white;
+  border-radius: 20px;
 
   &__title {
     margin: 0 0 20px 0;
   }
 
-  &__subtitle{
-    font-size: 17px;
-    line-height: 22px;
-    color: $grey-tabs;
-    margin: 0 0 15px 0;
-  }
-
-  &__text{
-    font-size: 15px;
-    line-height: 30px;
-    color: $black-one;
-    margin: 0 0 20px 0;
-  }
-
-  &__all-link {
-    display: inline-block;
-    position: relative;
-    font-size: 15px;
-    line-height: 20px;
-    color: $black-one;
-    transition: color $transition;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 11px;
-      height: 7px;
-      top: 56%;
-      right: -15px;
-      transform: translateY(-50%);
-      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
-    }
-
-    &:hover {
-      color: $orangeBtn-hover;
-    }
-  }
 
   &__rating {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 0 30px 0;
-    margin: 0 auto 30px auto;
-    border-bottom: 1px solid $grey-white;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
+
   &__item {
+    max-width: 160px;
+    min-width: 160px;
+    padding: 25px 5px;
+    border: 1px solid $green-white;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    &:not(:last-child) {
-      margin: 0 20px 0 0;
-    }
 
     &-info {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 20px;
-      letter-spacing: -0.004em;
-
+      color: $blue-hover;
       text-align: center;
     }
 
     &-progress {
       position: relative;
-      margin: 0 0 10px 0;
+      margin: 0 0 30px 0;
     }
 
     &-text {
-      font-size: 20px;
-      line-height: 12px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      font-size: 17px;
+      line-height: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: $pink;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      color: $blue-dark;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -99,92 +58,68 @@
 
 }
 
-//progress bar
-
-.single-chart {
-  width: 70px;
-  justify-content: space-around;
-}
-
 .circular-chart {
   display: block;
+  transform: scale(-1, 1);
+  width: 80px;
+  height: 80px;
 }
-
 .circle-bg {
   fill: none;
-  stroke: $grey-bg-circle;
-  stroke-width: 2;
+  stroke: $grey-white-bg;
+  stroke-width: 4.5;
 }
-
 .circle {
   fill: none;
-  stroke-width: 2;
+  stroke-width: 4.5;
   stroke-linecap: round;
 }
 
-.circle {
-  &.green {
-    stroke: $green-circle;
-  }
+
+.stp2{
+  stop-color: #B0C8FF;
 }
 
-.circle {
-  &.red {
-    stroke: $red-circle;
-  }
+.stp1{
+  stop-color: #0049F1;
+
 }
 
-.circle {
-  &.yellow {
-    stroke: $yellow-circle;
-  }
+
+.casino__review-item__count .progress-ring__circle {
+  stroke-width: 13;
+  fill: none;
+  transform-origin: center;
+  transform: rotate(90deg) scaleX(-1);
 }
+
 
 @media screen and (max-width: 1024px) {
+  .ratings{
+    border-radius: 22px;
+    padding: 30px 30px 20px;
+
+  }
+}
+
+@media screen and (max-width: 650px) {
   .ratings{
     border-radius: 0;
-    margin: 0 0 10px 0;
-    &__item{
-      &-text{
-        width: 45px;
-        height: 45px;
-        font-size: 17px;
-        line-height: 12px;
-      }
-    }
-  }
-
-  .single-chart {
-    width: 70px;
-    justify-content: space-around;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .ratings{
-    padding: 30px 15px 20px;
+    padding: 0;
+    background: transparent;
+    margin: 0 0 30px 0;
     &__rating{
-      display: grid;
-      grid-template-columns: auto auto auto;
-      gap: 20px;
-      justify-content: stretch;
+      padding: 0 15px;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
     }
-    &__item{
-      &:not(:last-child) {
-        margin: 0 0 0 0;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .ratings{
-    &__subtitle{
+    &__title{
+      padding: 0 15px;
       margin: 0 0 10px 0;
     }
-    &__text{
-      font-size: 13px;
-      line-height: 22px;
+    &__item{
+      background: $white;
+      border: none;
     }
   }
 }

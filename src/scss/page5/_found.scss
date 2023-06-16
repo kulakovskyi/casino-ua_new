@@ -1,0 +1,75 @@
+.found {
+  background: $white;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 0 0 20px 0;
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 30px;
+    color: $black-one;
+    margin: 0 0 20px 0;
+  }
+
+
+  &__item{
+    display: grid;
+    grid-template-columns: calc(30% - 10px) calc(70% - 10px);
+    gap: 20px;
+    &:not(:last-child){
+      margin: 0 0 20px 0;
+    }
+    &-title{
+      font-family: $font-firs-semb;
+      font-size: 15px;
+      line-height: 25px;
+      color: $blue-dark;
+    }
+    &-text{
+      font-size: 15px;
+      line-height: 25px;
+      color: $blue-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .found {
+    padding: 30px 30px 20px;
+    border-radius: 22px;
+    margin: 0 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .found {
+    padding: 0 15px;
+    border-radius: 0;
+    background: transparent;
+    margin: 0 0 30px 0;
+
+    &__title {
+      margin: 0 0 10px 0;
+    }
+    &__text{
+      font-size: 13px;
+      line-height: 22px;
+      margin: 0 0 20px 0;
+    }
+    &__item{
+      border-top: 1px solid $green-white;
+      padding: 12px 0;
+      grid-template-columns: 180px 1fr;
+      &:not(:last-child){
+        margin: 0 0 0 0;
+      }
+      &:last-child{
+        border-bottom: 1px solid $green-white;
+      }
+    }
+  }
+}

@@ -3,14 +3,14 @@
 @import "mixins";
 
 // подключения компонентов страницы
-@import "page2/_news";
-@import "general-block/_faq.scss";
-@import "general-block/_author.scss";
+
+@import "page2/_news.scss";
+@import "general-block/_faq-aside.scss";
 @import "general-block/_subscribe.scss";
 
 
-
 @import "general-block/_footer.scss";
+
 
 
 

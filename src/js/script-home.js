@@ -7,6 +7,12 @@ import { dynamicAdaptive } from './components/dynamicAdaptive.js';
 //Acordeon
 import { accorderon } from './functions/accorderon';
 
+//Footer cookie
+import { footerCookie } from './components/footerCookieComponent';
+
+//btn scrollTop
+import { scrollTop } from './components/scrollTopComponent';
+
 //slot block show/hidden btn
 import { slotItem } from './components/home/slotItem-Component.js';
 
@@ -16,8 +22,5 @@ import { bonusItem } from './components/home/bonusItem-Component.js';
 //News Tabs sticky
 import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
 
-//Footer cookie
-import { footerCookie } from './components/footerCookieComponent';
 
-//btn scrollTop
-import { scrollTop } from './components/scrollTopComponent';
+
