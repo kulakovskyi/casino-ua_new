@@ -5,23 +5,28 @@
 
 <body class="body">
 @include('partials/general-block/header.html')
+
 @include('partials/page12/casino.html')
 
 <div class="wrapper">
-    <div class="wrapper__container">
+    <div class="wrapper__cont">
         <main class="main">
             @include('partials/page12/public.html')
             @include('partials/page12/top.html')
+            @include('partials/page12/social.html')
         </main>
-        <aside class="aside">
+        <aside class="aside" data-da=".main, 1024, last">
             @include('partials/page12/blog.html')
-            @include('partials/page12/casino-online.html')
+            @include('partials/page2/top-casino.html')
+
         </aside>
     </div>
 </div>
-@include('partials/page12/video.html')
 @include('partials/general-block/subscribe.html')
 @include('partials/general-block/footer.html')
 </body>
 
 </html>
+
+
+

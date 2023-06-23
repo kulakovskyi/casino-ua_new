@@ -1,8 +1,12 @@
 .public{
-  position: relative;
-  padding: 0 0 30px 0;
-  border-bottom: 1px solid $grey;
+  background: $white;
+  border-radius: 20px;
+  padding: 50px;
   margin: 0 0 20px 0;
+
+  &__wrap{
+    position: relative;
+  }
   &__link{
     position: absolute;
     width: 100%;
@@ -13,17 +17,18 @@
   &__image{
     margin: 0 0 20px 0;
     img{
-      border-radius: 8px;
+      min-width: 100%;
+      border-radius: 14px;
     }
   }
   h2{
-    font-family: $font-popins-semb;
-    color: $black-one;
-    font-size: 24px;
-    line-height: 36px;
-    margin: 0 0 10px 0;
-    @media screen and (max-width: 600px) {
-      font-size: 20px;
+    font-family: $font-firs-semb;
+    color: $blue-dark;
+    font-size: 32px;
+    line-height: 35px;
+    margin: 0 0 20px 0;
+    @media screen and (max-width: 650px) {
+      font-size: 28px;
       line-height: 30px;
     }
   }
@@ -33,7 +38,10 @@
     p{
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $blue-dark;
+      span{
+        color: $green-two;
+      }
       &:not(:last-child){
         margin: 0 20px 0 0;
       }
@@ -43,21 +51,18 @@
 
 @media screen and (max-width: 1024px) {
   .public{
-    &__image{
-      img{
-        border-radius: 0;
-      }
-    }
-    h2,
-    &__info{
-      padding: 0 15px;
-    }
+    padding: 30px 30px 20px;
+    border-radius: 22px;
+    margin: 0 0 20px 0;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .public{
-    padding: 0 0 5px 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    margin: 0 0 20px 0;
     &__info{
       flex-wrap: wrap;
       p{

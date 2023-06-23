@@ -5,23 +5,34 @@
 
 <body class="body">
 @include('partials/general-block/header.html')
-@include('partials/page13/breadcrumbs.html')
+
+@include('partials/page13/casino.html')
+
 <div class="wrapper">
-    <div class="wrapper__container">
+    <div class="wrapper__cont">
         <main class="main">
             @include('partials/page13/author.html')
-            @include('partials/page3/news.html')
-            @include('partials/page3/news.html')
-        </main>
-        <aside class="aside">
+            @include('partials/page2/news.html')
 
+
+            @include('partials/general-block/feedbacks.html')
+            @include('partials/general-block/leave.html')
+            @include('partials/general-block/login-aside.html')
+            @include('partials/page12/social.html')
+            @include('partials/general-block/faq.html')
+        </main>
+        <aside class="aside" data-da=".main, 1024, last">
             @include('partials/page12/blog.html')
-            @include('partials/page12/casino-online.html')
+            @include('partials/page2/top-casino.html')
+
         </aside>
     </div>
 </div>
-@include('partials/general-block/faq.html')
 @include('partials/general-block/subscribe.html')
 @include('partials/general-block/footer.html')
 </body>
+
 </html>
+
+
+

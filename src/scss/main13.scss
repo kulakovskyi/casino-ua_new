@@ -2,12 +2,20 @@
 @import "vars";
 @import "mixins";
 
-//aside
-@import "page12/_casino-online";
 
-//main
-@import "general-block/_faq";
+// подключения компонентов страницы
+
+
+@import "general-block/_feedback-aside";
+@import "general-block/_leave-aside";
+@import "general-block/_login-aside-left";
+@import "page12/_social.scss";
+@import "general-block/_faq-aside";
+
 @import "general-block/_subscribe.scss";
+
 @import "general-block/_footer.scss";
+
+
 
 

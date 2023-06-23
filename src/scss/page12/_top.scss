@@ -1,87 +1,23 @@
 .top{
-  display: flex;
-  flex-direction: column;
-  &__all-link{
-    display: inline-block;
-    font-family: $font-popins-semb;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: $white;
-    align-self: center;
-    text-align: center;
-    padding: 19px 85px 17px;
-  }
-
-  &__info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__wrap{
+    background: $white;
+    border-radius: 20px;
+    padding: 50px;
     margin: 0 0 20px 0;
   }
+  display: flex;
+  flex-direction: column;
 
-  h2{
-    font-family: $font-popins-semb;
-    font-size: 20px;
-    line-height: 27px;
-    color: $grey-tabs;
-    margin: 0 15px 0 0;
-  }
+  margin: 0 0 30px 0;
 
-  &__tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    &-item {
-      &:not(:last-child) {
-        margin: 0 5px 0 0;
-      }
-    }
-
-    &-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    &-btn {
-      display: inline-block;
-      padding: 8px 18px 6px;
-      font-size: 13px;
-      line-height: 22px;
-      color: $grey-tabs;
-      border-radius: 8px;
-      background: transparent;
-      transition: background-color $transition, color $transition, box-shadow $transition;
-
-      &:hover {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
-      }
-
-      &._active {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
-      }
-
-    }
-  }
-
-  &__list{
-    display: grid;
-    grid-template-columns: calc(50% - 12px) calc(50% - 12px);
-    gap: 24px;
-    margin: 0 0 30px 0;
-  }
 
   &__item{
     position: relative;
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin: 0 0 20px 0;
+    }
     &-link{
       position: absolute;
       width: 100%;
@@ -90,91 +26,117 @@
       left: 0;
     }
     &-image{
-      margin: 0 0 15px 0;
+      min-width: 300px;
+      max-width: 300px;
+      margin: 0 20px 0 0;
       img{
-        border-radius: 8px;
+        border-radius: 14px;
+        min-width: 100%;
       }
     }
 
-    &-licensed{
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      line-height: 15px;
-      letter-spacing: -0.004em;
-      color: $blue;
-      margin: 0 0 5px 0;
-      span{
-        display: inline-block;
-        &:not(:last-child){
-          margin: 0 8px 0 0;
-        }
-      }
-    }
 
     p{
-      font-size: 15px;
-      line-height: 28px;
+      font-size: 20px;
+      line-height: 25px;
       letter-spacing: 0.01em;
-      color: $grey-tabs;
-      margin: 0 0 5px 0;
+      color: $blue-dark;
+      margin: 0 0 10px 0;
     }
 
     time{
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $green-two;
     }
   }
 
   &__pagination{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &-btn{
-      font-family: $font-popins-semb;
-      font-size: 15px;
-      line-height: 25px;
+    &-list{
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
+
+    }
+    &-item{
       &:not(:last-child){
         margin: 0 10px 0 0;
       }
-
-      &-left{
-        img{
-          transform: scale(-1);
-        }
+    }
+    &-btn{
+      padding-top: 2px;
+      font-family: $font-firs-reg;
+      background: transparent;
+      width: 65px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      line-height: 22px;
+      color: $blue;
+      letter-spacing: -0.003em;
+      border: 2px solid $green-white;
+      border-radius: 10px;
+      transition: $transition;
+      &:hover{
+        border: 2px solid $blue;
       }
-      &-item{
-        color: $grey-tabs;
-        background: $white;
-        box-shadow: $boxShadowBtn;
-        transition: background-color $transition, color $transition;
-        &:hover{
-          background: $orangeBtn-hover;
-          color: $white;
-        }
-        &._active{
-          background: $orangeBtn-hover;
-          color: $white;
-        }
+      &._active{
+        border: 2px solid $blue;
+      }
+      @media screen and (max-width: 650px) {
+        width: 55px;
+        height: 40px;
+      }
+      @media screen and (max-width: 460px) {
+        width: 46px;
+        height: 36px;
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      @media screen and (max-width: 370px) {
+        width: 37px;
       }
     }
-
   }
-
 }
 
 @media screen and (max-width: 1024px) {
   .top{
-    padding: 0 15px 30px 15px;
+    margin: 0 0 30px 0;
+    &__wrap{
+      padding: 30px 30px 20px;
+      border-radius: 22px;
+    }
+    &__list{
+      display: grid;
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      gap: 15px;
+    }
     &__item{
+      border-radius: 20px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: 2px solid $grey-bg-section;
+      &:not(:last-child){
+        margin: 0;
+      }
+      &-row{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        p{
+          flex: 1 1 auto;
+        }
+      }
       &-image{
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
         img{
           min-width: 100%;
         }
@@ -182,25 +144,37 @@
     }
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .top{
-    &__all-link{
-      width: calc(100% - 30px);
+    margin: 0 0 30px 0;
+    &__wrap{
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      margin: 0 0 20px 0;
+    }
 
-    }
-    &__info{
-      flex-direction: column;
-      align-items: center;
-    }
-    h2{
-      font-size: 20px;
-      line-height: 30px;
-      margin: 0 0 10px 0;
+    &__item{
+      border: none;
+      padding: 10px;
+      background: $white;
+      &-row{
+        padding: 0 5px 5px 5px;
+        p{
+          font-size: 17px;
+          line-height: 24px;
+        }
+        time{
+          font-size: 13px;
+          line-height: 17px;
+        }
+      }
     }
     &__list{
       grid-template-columns: 100%;
-      gap: 20px;
+      gap: 10px;
     }
+
   }
 }
 

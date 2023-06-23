@@ -1,11 +1,12 @@
 //Реализация бургер-меню
 import { burger } from './functions/burger';
 
+// Dynamic Adaptive
+import { dynamicAdaptive } from './components/dynamicAdaptive.js';
+
 //Acordeon
 import { accorderon } from './functions/accorderon';
 
-//header input
-import { inputComponent } from './components/inputHeaderComponent';
 
 //Footer cookie
 //import { footerCookie } from './components/footerCookieComponent';
@@ -13,7 +14,7 @@ import { inputComponent } from './components/inputHeaderComponent';
 //btn scrollTop
 import { scrollTop } from './components/scrollTopComponent';
 
-//News Tabs
+//News Tabs sticky
 import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
 
 

@@ -1,0 +1,63 @@
+.social{
+  background: $white;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 0 0 20px 0;
+  &__title{
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-link{
+      overflow: hidden;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $blue;
+      border-radius: 8px;
+      transition: background $transition;
+      &:not(:last-child){
+        margin: 0 10px 0 0;
+      }
+      &:hover{
+        background: $blue-hover;
+      }
+      svg{
+        max-width: 100%;
+        max-height: 100%;
+        fill: $white;
+      }
+      @media screen and (max-width: 650px){
+        width: 47px;
+        height: 47px;
+      }
+      @media screen and (max-width: 350px){
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .social{
+    padding: 45px 30px 45px;
+    border-radius: 22px;
+    margin: 0 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .social{
+    padding: 40px 15px;
+    margin: 0 0 30px 0;
+    &__title{
+      margin: 0 0 15px 0;
+    }
+  }
+}

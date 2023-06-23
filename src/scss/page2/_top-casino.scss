@@ -82,9 +82,10 @@
   }
 
   &__item {
+
     display: flex;
     align-items: center;
-    width: 315px;
+    width: 320px;
     border-radius: 14px;
     padding: 10px;
     background: $white;
@@ -192,7 +193,7 @@
     }
     &__title{
       font-size: 20px;
-      line-height: 48px;
+      line-height: 35px;
     }
   }
 }

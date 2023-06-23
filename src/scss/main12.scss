@@ -3,16 +3,14 @@
 @import "mixins";
 
 
-//aside
-@import "page12/_casino-online";
-
-
-//main
-@import "page12/_top";
-@import "page12/_video";
-
+// подключения компонентов страницы
+@import "page12/_top.scss";
+@import "page12/_social.scss";
 
 @import "general-block/_subscribe.scss";
+
 @import "general-block/_footer.scss";
+
+
 
 

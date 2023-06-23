@@ -1,9 +1,9 @@
 .casino {
-  padding: 240px 0 140px 0;
+  padding: 210px 0 130px 0;
   position: relative;
   background: $back-body url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 0/cover;
   @media screen and (max-width: 1024px){
-    background: $back-body url("../img/home/casino/bg-tab-test.webp") no-repeat 50% 0/cover;
+    background: $back-body url("../img/home/casino/bg-tab-test.webp") no-repeat 50% 10%/cover;
   }
   @media screen and (max-width: 650px){
     background: $back-body url("../img/home/casino/bg-mob-test.webp") no-repeat 50% 0/cover;
@@ -36,84 +36,16 @@
     letter-spacing: 0.02em;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 auto 50px auto;
-
-  }
-
-  &__row {
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    border-radius: 24px;
-    padding: 12px 45px 25px;
-    background: $grey-white-bg-3;
     margin: 0 auto 0 auto;
-    max-width: 980px;
+
   }
 
-  &__item {
-    max-width: 100px;
-    position: relative;
-    &-link{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      z-index: 5;
-    }
-
-    &::before {
-      position: absolute;
-      width: 1px;
-      height: 40px;
-      right: -15px;
-      top: 35px;
-      background: $grey-white-bg-4;
-
-    }
-
-    &:not(:last-child) {
-      margin: 0 30px 0 0;
-
-      &::before {
-        content: '';
-      }
-    }
-
-    &-img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 100px;
-      min-width: 100px;
-      min-height: 100px;
-      max-height: 100px;
-      transition: transform .3s ease;
-    }
-    &:hover &-img{
-      transform: scale(1.1);
-    }
-
-    &:hover &-text{
-      color: $white-hover;
-    }
-
-    &-text {
-      font-family: $font-firs-reg;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      letter-spacing: 0.02em;
-      color: $white;
-      transition: color .3s ease;
-    }
-  }
 
 }
 
 @media screen and (max-width: 1024px) {
   .casino{
-    padding: 180px 0 105px 0;
+    padding: 155px 0 125px 0;
     &__container{
       padding: 0;
     }
@@ -136,59 +68,18 @@
         text-align: center;
       }
     }
-    &__row{
-      min-width: 980px;
-      &-wrap{
-        padding: 0 15px;
-        overflow-x: scroll;
-      }
-    }
 
   }
 }
 
 @media screen and (max-width: 650px) {
   .casino{
-    padding: 136px 0 55px 0;
-    &__item{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &:not(:last-child){
-        margin: 0 45px 0 0;
-        &::before{
-          top: 12px;
-          right: -25px;
-        }
-      }
-      &-img{
-        max-width: 40px;
-        min-width: 40px;
-        min-height: 40px;
-        max-height: 40px;
-        margin: 0 0 10px 0;
-      }
-      &-text{
-        font-size: 14px;
-        line-height: 16px;
-      }
-    }
-    &__row{
-      border-radius: 24px;
-      padding: 21px 28px 15px;
-      margin: 0 auto 40px auto;
-      min-width: 800px;
-      max-width: calc(100% - 30px);
-
-      &-wrap{
-
-      }
-    }
+    padding: 136px 0 100px 0;
     &__title{
       font-size: 38px;
       line-height: 48px;
       text-align: center;
-      margin: 0 0 40px 0;
+      margin: 0 0 0 0;
       &-top{
         margin: 0 0 5px 0;
         span{
@@ -207,7 +98,6 @@
     &__title{
       font-size: 34px;
       line-height: 45px;
-      margin: 0 0 30px 0;
       &-top{
         margin: 0;
         span{
@@ -228,7 +118,6 @@
     &__title{
       font-size: 30px;
       line-height: 41px;
-      margin: 0 0 20px 0;
       &-top{
         span{
           font-size: 24px;
