@@ -6,21 +6,19 @@
 @import "base/nullstyle";
 @import "base/wrapper";
 
-
 .title{
-  font-family: $font-popins-semb;
-  color: $black-one;
-  font-size: 24px;
-  line-height: 36px;
-  @media screen and (max-width: 600px){
-    font-size: 20px;
+  font-family: $font-firs-semb;
+  color: $blue-dark;
+  font-size: 32px;
+  line-height: 35px;
+  @media screen and (max-width: 650px){
+    font-size: 28px;
     line-height: 30px;
   }
 }
 
-
 [class*="__container"] {
-  max-width: 1270px;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -29,17 +27,21 @@ body {
   &._lock {
     overflow: hidden;
   }
-  font-family: $font-popins-reg;
+  font-family: $font-firs-reg;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: $black-one;
-  background: $pink;
+  color: $blue-dark;
+  background: rgb(11, 11, 32);
 }
+
+.blocks__main-wrap{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 
 // подключения компонентов страницы
 @import "general-block/header";
-@import "page2/_casino";
-
-@import "page17/_contacts";
-@import "general-block/_subscribe.scss";
+@import "page11/_casino.scss";
+@import "page17/contacts.scss";

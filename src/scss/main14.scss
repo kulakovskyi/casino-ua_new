@@ -3,15 +3,14 @@
 @import "mixins";
 
 
-//aside
-
-
- 
-//main
-
-@import "page14/_top";
+// подключения компонентов страницы
+@import "page14/_top.scss";
+@import "page12/_social.scss";
 
 @import "general-block/_subscribe.scss";
+
 @import "general-block/_footer.scss";
+
+
 
 

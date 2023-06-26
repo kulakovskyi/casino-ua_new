@@ -1,318 +1,139 @@
 .author{
-  padding: 30px;
-  background: $white;
-  border-radius: 8px;
+  padding: 50px;
   margin: 0 0 20px 0;
+  background: $white;
+  border-radius: 20px;
+  @media screen and (max-width: 1024px){
+    padding: 30px 30px 20px;
+  }
+  @media screen and (max-width: 650px){
+    padding: 15px 0 0 0;
+    margin: 0 0 30px 0;
+    background: transparent;
+    border-radius: 0;
+  }
+
   &__info{
     display: flex;
     align-items: center;
-    margin: 0 0 20px 0;
-    &-image{
-      max-width: 80px;
-      margin: 0 15px 0 0;
-      img{
-        border-radius: 8px;
-      }
+    margin: 0 0 30px 0;
+    @media screen and (max-width: 650px){
+      margin: 0 0 20px 0;
     }
-    &-wrap{
-      p{
-        &:first-child{
-          font-family: $font-popins-semb;
-          font-size: 17px;
-          line-height: 20px;
-          color: $black-one;
-          margin: 0 0 5px 0;
-        }
-        &:nth-child(2){
-          font-size: 13px;
-          line-height: 20px;
-          color: $grey-tabs;
-        }
+  }
+  &__image{
+    max-width: 84px;
+    width: 84px;
+    height: 84px;
+    margin: 0 10px 0 0;
+    position: relative;
+    &-link{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    @media screen and (max-width: 650px){
+      max-width: 80px;
+      width: 80px;
+      height: 80px;
+    }
+    img{
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 50%;
+      @media screen and (max-width: 650px){
+        width: 80px;
+        height: 80px;
       }
     }
   }
-  &__text{
-    margin: 0 0 30px 0;
-    p{
-      font-size: 15px;
-      line-height: 30px;
-      color: $black-one;
+  &__name{
+    font-family: $font-firs-semb;
+    color: $blue-dark;
+    font-size: 32px;
+    line-height: 36px;
+    @media screen and (max-width: 650px) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+  }
+  &__red{
+    font-family: $font-firs-reg;
+    margin-top: 3px;
+    font-size: 15px;
+    color: $green;
+    @media screen and (max-width: 650px) {
+      font-size: 13px;
+
     }
   }
   &__social{
-    display: flex;
-    align-items: center;
-    &-item{
+
+    &-title{
+      font-family: $font-firs-reg;
+      color: $green;
+      font-size: 15px;
+      margin: 0 0 10px 0;
+    }
+    &-row{
+      display: flex;
+      gap: 5px;
+    }
+    &-link{
+      overflow: hidden;
+      width: 52px;
+      height: 52px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 64px;
-      height: 42px;
+      background: $blue;
       border-radius: 8px;
-      &:not(:last-child){
-        margin: 0 10px 0 0;
+      transition: background $transition;
+      &:hover{
+        background: $blue-hover;
       }
       svg{
         max-width: 100%;
         max-height: 100%;
         fill: $white;
       }
-    }
-    &-wrap{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    &-text{
-      font-size: 13px;
-      line-height: 20px;
-      color: $grey-tabs;
-      margin: 0 0 10px 0;
-    }
-
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .author{
-    padding: 20px 15px 30px;
-    border-radius: 0;
-    margin: 0 0 20px 0;
-    &__text{
-      p{
-        font-size: 13px;
-        line-height: 20px;
+      @media screen and (max-width: 650px){
+        width: 47px;
+        height: 47px;
       }
     }
   }
-}
-
-.content-table{
-  border-radius: 20px;
-  overflow-x: hidden;
-  table{
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0 0 20px 0;
-    background: $white;
-    tr,td{
-      border: 1px solid #ddd;
-      padding: 15px;
-      color: $black-one;
-      font-size: 15px;
-      line-height: 20px;
-    }
-    tr:first-child {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background: $burgundy-gradient;
-      td{
-        color: $white;
-      }
-
-    }
-  }
-}
-
-
-@media screen and (max-width: 600px){
-  .content-table{
-    table{
-      tr,td{
-        padding: 10px;
-        font-size: 13px;
-        line-height: 19px;
-      }
-    }
-  }
-
-}
-
-
-
-.news__blog{
-  h2{
-    font-family: $font-popins-semb;
-    font-size: 28px;
-    line-height: 48px;
-    color: $black-one;
-    margin: 0 0 10px 0;
-  }
-
-  h3,h4,h5,h6{
-    font-family: $font-popins-semb;
-    letter-spacing: -0.01em;
-    color: $black-one;
-  }
-
-  h3{
-    font-size: 20px;
-    line-height: 40px;
-  }
-
-  h4{
-    font-size: 18px;
-    line-height: 48px;
-  }
-
-  h5{
-    font-size: 16px;
-    line-height: 48px;
-  }
-
-  h6{
-    font-size: 14px;
-    line-height: 48px;
-  }
-
-  p, li{
-    font-family: $font-popins-reg;
+  &__text{
+    color: $blue-dark;
     font-size: 15px;
-    line-height: 30px;
-    margin: 0 0 20px 0;
-  }
-
-  ol{
-    list-style-type: none;
+    line-height: 25px;
     margin: 0 0 30px 0;
-    counter-reset: counter-ol;
-    li{
-      position: relative;
-      padding-left: 35px;
-      &::before{
-        position: absolute;
-        top: 2px;
-        left: 0;
-        counter-increment: counter-ol;
-        content: counter(counter-ol) " " ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $font-popins-semb;
-        color: $white;
-        min-width: 24px;
-        min-height: 24px;
-        font-size: 15px;
-        line-height: 25px;
-        border-radius: 50%;
-        background: $burgunde-circle-gradient;
-      }
-      &:not(:last-child){
-        margin: 0 0 20px 0;
-      }
-      p{
-        margin: 0;
+    @media screen and (max-width: 650px){
+      margin: 0 0 20px 0;
+    }
+    a{
+      color: $blue-dark;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
       }
     }
   }
-
-  ul{
-    margin: 0 0 30px 0;
-    li{
-      position: relative;
-      padding: 0 0 0 47px;
-      &::before{
-        content: 'i';
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 5px;
-        left: 0;
-        width: 34px;
-        height: 34px;
-        font-size: 25px;
-        line-height: 30px;
-        color: $white;
-        font-family: sans-serif;
-        border-radius: 8px;
-        background: $burgundy-gradient;
-      }
-      &:not(:last-child){
-        margin: 0 0 15px 0;
-      }
-      p{
-        margin: 0;
-      }
-    }
-  }
-
-  blockquote{
-    position: relative;
-    padding: 85px 30px 20px;
-    border-radius: 8px;
-    background: $burgundy-gradient;
+  a.author__link{
+    display: inline-block;
+    text-decoration: none;
     color: $white;
-    font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 0.01em;
-    margin: 0 0 20px 0;
-    &::before{
-      pointer-events: none;
-      content: '‟';
-      font-size: 65px;
-      line-height: 65px;
-      transform: scale(1, -1);
-      height: 18px;
-      color: $orange;
-      position: absolute;
-      display: inline-block;
-      top: 30px;
-      left: 30px;
-    }
-    &::after{
-      pointer-events: none;
-      content: '‟';
-      font-size: 65px;
-      line-height: 65px;
-      transform: scale(-1, 1);
-      height: 18px;
-      color: $orange;
-      position: absolute;
-      display: inline-block;
-      top: 40px;
-      left: 52px;
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .news__blog{
-    h2{
-      font-size: 20px;
-      line-height: 30px;
-      margin: 0 0 15px 0;
-    }
-
-    h3,h4,h5,h6{
-      font-size: 17px;
-      line-height: 26px;
-    }
-
-    p, li{
-      font-size: 13px;
-      line-height: 22px;
-      margin: 0 0 15px 0;
-    }
-
-    ol{
-      margin: 0 0 20px 0;
-      li{
-        &:not(:last-child){
-          margin: 0 0 10px 0;
-        }
-      }
-    }
-
-    ul{
-      margin: 0 0 20px 0;
-    }
-
-    blockquote{
-      padding: 85px 20px 20px 20px;
-      font-size: 13px;
-      line-height: 28px;
+    padding: 14px 52px 13px;
+    font-size: 13px;
+    line-height: 20px;
+    @media screen and (max-width: 650px){
+      width: 100%;
+      text-align: center;
+      padding: 14px 15px 13px;
     }
   }
 }

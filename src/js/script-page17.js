@@ -1,11 +1,13 @@
 //Реализация бургер-меню
 import { burger } from './functions/burger';
 
-//header input
-import { inputComponent } from './components/inputHeaderComponent';
+// Dynamic Adaptive
+import { dynamicAdaptive } from './components/dynamicAdaptive.js';
 
 //Footer cookie
-//import { footerCookie } from './components/footerCookieComponent';
+import { footerCookie } from './components/footerCookieComponent';
 
 //btn scrollTop
 import { scrollTop } from './components/scrollTopComponent';
+
+
