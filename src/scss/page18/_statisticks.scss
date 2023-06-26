@@ -1,0 +1,49 @@
+.statistics{
+  width: 100%;
+  padding: 25px;
+  background: $white;
+  border-radius: 14px;
+  margin: 0 0 30px 0;
+  &__title{
+    font-family: $font-firs-reg;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: -0.004em;
+    color: $blue-dark;
+    margin: 0 0 20px 0;
+  }
+  &__item{
+    &-title{
+      font-family: $font-firs-reg;
+      font-size: 13px;
+      line-height: 15px;
+      color: $grey-text;
+      margin: 0 0 5px 0;
+    }
+    &-text{
+      font-family: $font-firs-reg;
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: -0.004em;
+      color: $blue-dark;
+    }
+    &:not(:last-child){
+      margin: 0 0 15px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .statistics{
+    margin: 0 0 30px 0;
+    width: calc(50% - 10px);
+
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .statistics{
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
+}

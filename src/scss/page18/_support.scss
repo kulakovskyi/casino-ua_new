@@ -1,0 +1,33 @@
+.support{
+  width: 100%;
+  padding: 25px;
+  background: $white;
+  border-radius: 14px;
+  margin: 0 0 30px 0;
+  font-size: 13px;
+  line-height: 15px;
+  color: $blue-dark;
+  a{
+    color: $blue;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
+  .support{
+    margin: 0 0 30px 0;
+    width: calc(50% - 10px);
+
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .support{
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
+}

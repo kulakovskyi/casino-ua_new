@@ -1,0 +1,157 @@
+.slot {
+  position: relative;
+  z-index: 10;
+  margin: 0 0 30px 0;
+
+  &__container{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    &-link{
+      display: inline-block;
+      margin: 0 0 0 15px;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__item{
+    padding: 15px;
+    max-width: 312px;
+    min-width: 312px;
+    background: $white;
+    border-radius: 20px;
+    &-img{
+      margin: 0 0 15px 0;
+      position: relative;
+      &-link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      img{
+        min-width: 100%;
+        border-radius: 14px;
+      }
+
+    }
+    &-title{
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: .01em;
+      color: $blue-dark;
+      margin: 0 0 15px 0;
+    }
+    &-text{
+      font-size: 13px;
+      line-height: 17px;
+      letter-spacing: -.004em;
+      color: $grey-bonus;
+      height: 84px;
+      overflow: hidden;
+      margin: 0 0 5px 0;
+      &._show{
+        height: auto;
+      }
+    }
+    &-showMore{
+      margin: 0 0 15px 0;
+      font-size: 13px;
+      line-height: 15px;
+      cursor: pointer;
+      color: $blue;
+      transition: color .3s ease;
+      &:hover{
+        color: $blue-hover;
+
+      }
+    }
+    &-row{
+      display: flex;
+      align-items: center;
+    }
+    &-like{
+      position: relative;
+      margin: -2px 10px 0 auto;
+      width: 17px;
+      height: 14px;
+      cursor: pointer;
+      background: url("../img/general-block-image/like-one.svg") no-repeat center/ 17px 14px;
+      transition: background $transition;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: url("../img/general-block-image/like-two.svg") no-repeat center/ 17px 14px;
+        transition: opacity $transition;
+      }
+      &._active::after{
+        opacity: 1;
+      }
+    }
+    &-link{
+      display: inline-block;
+      padding: 9px 30px 8px;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+  .slot{
+    margin: 0 0 30px 0;
+    position: relative;
+    left: -15px;
+    width: calc(100% + 30px);
+    &__container{
+      padding: 0;
+    }
+    &__title,
+    &__list{
+      padding: 0 15px;
+    }
+    &__list{
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+    &__item{
+      min-width: 315px;
+    }
+
+
+  }
+}
+
+
+
+@media screen and (max-width: 650px){
+  .slot{
+
+    &__title{
+      margin: 0 0 10px 0;
+    }
+
+
+  }
+}
