@@ -81,6 +81,10 @@
       line-height: 20px;
       text-align: center;
       letter-spacing: 0.04em;
+      &._disabled{
+        pointer-events: none;
+        background: $grey-disabled;
+      }
     }
     &-like{
       position: relative;
@@ -143,6 +147,21 @@
         text-transform: uppercase;
         color: #aeaeae;
         background: #000000;
+        &._hidden{
+          display: none;
+        }
+      }
+      &-load{
+        font-family: $font-firs-semb;
+        display: inline-block;
+        padding: 6px 17px 5px;
+        border-radius: 8px;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #643f09;
+        background: $orange;
         &._hidden{
           display: none;
         }
@@ -308,9 +327,6 @@
 @media screen and (max-width: 1024px){
   .casino{
     padding: 101px 0 50px;
-    &::after{
-      content: none;
-    }
     &__info{
       &-img{
         max-width: 280px;

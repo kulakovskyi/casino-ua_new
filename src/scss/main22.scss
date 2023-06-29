@@ -1,0 +1,15 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+
+@import "page2/_top-casino";
+
+//main
+@import "page22/_warning";
+@import "page22/_info";
+
+
+@import "general-block/_subscribe.scss";
+@import "general-block/_footer.scss";
+
+

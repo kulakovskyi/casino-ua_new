@@ -1,0 +1,12 @@
+.info{
+  margin: 0 0 30px 0;
+  background: $white;
+  border-radius: 20px;
+  padding: 44px;
+  &__title{
+    text-align: center;
+  }
+  @media screen and (max-width: 650px) {
+    padding: 40px 20px;
+  }
+}

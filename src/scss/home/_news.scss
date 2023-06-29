@@ -105,7 +105,7 @@
     justify-content: space-between;
   }
 
-  &__blog {
+  &__wrap {
     margin: 0 30px 0 0;
   }
 }
@@ -596,7 +596,7 @@
       flex-direction: column;
     }
 
-    &__blog {
+    &__wrap {
       margin: 0 0 20px 0;
       max-width: 100%;
     }
@@ -641,7 +641,7 @@
       padding: 0;
     }
 
-    &__blog {
+    &__wrap {
       padding: 0 15px;
     }
   }

@@ -49,8 +49,10 @@ body {
 
 .aside{
   min-width: 320px;
+  max-width: 320px;
   position: relative;
   @media screen and (max-width: 1024px){
+    max-width: 100%;
     min-width: auto;
     margin: 0 0 30px 0;
   }

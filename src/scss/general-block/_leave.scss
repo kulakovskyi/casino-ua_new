@@ -49,7 +49,7 @@
       padding: 12px 15px 11px;
       border-radius: 4px;
       background: $grey-bg-section;
-      height: 130px;
+      height: 170px;
       resize: none;
       margin: 0 0 20px 0;
 
@@ -89,6 +89,10 @@
       transition: background-color .3s ease;
       &:hover{
         background: $blue-hover;
+      }
+      &._disabled{
+        pointer-events: none;
+        background: $grey-disabled;
       }
     }
   }

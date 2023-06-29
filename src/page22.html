@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('partials/page22/head.html')
+
+
+<body class="body">
+@include('partials/general-block/header.html')
+
+@include('partials/page22/casino.html')
+
+<div class="wrapper">
+  <div class="wrapper__cont">
+    <main class="main">
+      @include('partials/page22/user-complaint.html')
+      @include('partials/page22/discussion.html')
+      @include('partials/page22/warning.html')
+      @include('partials/page22/info.html')
+
+    </main>
+    <aside class="aside">
+      @include('partials/page22/complaint-info.html')
+      @include('partials/page22/last-complaints.html')
+      @include('partials/page18/top-casino.html')
+    </aside>
+  </div>
+</div>
+@include('partials/general-block/subscribe.html')
+@include('partials/general-block/footer.html')
+@include('partials/page22/popupDiscution.html')
+</body>
+</html>

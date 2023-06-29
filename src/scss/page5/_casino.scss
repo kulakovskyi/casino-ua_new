@@ -80,6 +80,10 @@
       line-height: 20px;
       text-align: center;
       letter-spacing: 0.04em;
+      &._disabled{
+        pointer-events: none;
+        background: $grey-disabled;
+      }
     }
     &-like{
       position: relative;
@@ -225,9 +229,7 @@
 @media screen and (max-width: 1024px){
   .casino{
     padding: 101px 0 50px;
-    &::after{
-      content: none;
-    }
+
     &__info{
       &-img{
         max-width: 280px;

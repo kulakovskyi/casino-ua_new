@@ -201,10 +201,13 @@
         &::after{
           content: '';
           display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0px 4px 6px 4px;
+          border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
+          transform: rotate(180deg);
           margin: 0 0 0 6px;
-          width: 8px;
-          height: 6px;
-          background: url("../img/general-block-image/header/arrow-menu.svg") no-repeat center/contain;
         }
         &::before{
           content: '';
@@ -233,6 +236,10 @@
         .menu-item {
           position: relative;
           margin: 0;
+          &.mobile-active > a::after{
+            right: 18px;
+            transform: translateX(-50%) rotate(180deg);
+          }
           a, span {
             display: flex;
             align-items: center;
@@ -243,11 +250,12 @@
             color: $white;
             transition: background-color $transition;
             &::after{
+
               margin: 0;
               position: absolute;
               right: 15px;
               top: 45%;
-              transform: translateX(-50%) rotate(-90deg);
+              transform: translateX(-50%) rotate(90deg);
             }
             &::before{
               content: '';
@@ -262,6 +270,11 @@
             &:hover{
               background: rgba(255,255,255,.07);
             }
+
+            //&:hover::after{
+            //  right: 18px;
+            //  transform: translateX(-50%) rotate(180deg);
+            //}
 
           }
 
@@ -317,6 +330,7 @@
             content: none;
           }
           &::after{
+            border-color: transparent transparent rgba(255, 255, 255, 1) transparent;
             position: absolute;
             right: 20px;
             top: 21px;
@@ -359,7 +373,7 @@
           .sub-menu {
             display: block;
             a::after{
-              transform: rotate(-90deg);
+              transform: rotate(90deg);
             }
           }
            a,span{
@@ -381,7 +395,7 @@
 
             }
             a::after{
-              transform: rotate(-90deg);
+              transform: rotate(90deg);
             }
           }
           //.sub-menu-2{

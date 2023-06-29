@@ -1,0 +1,63 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "_colorStyles";
+@import "base/nullstyle";
+@import "base/wrapper-aside-left";
+
+
+.title{
+  font-family: $font-firs-semb;
+  color: $blue-dark;
+  font-size: 32px;
+  line-height: 35px;
+  @media screen and (max-width: 650px){
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+
+[class*="__container"] {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: $font-firs-reg;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: $blue-dark;
+  background: rgb(11, 11, 32);
+}
+
+// подключения компонентов страницы
+@import "general-block/header";
+
+
+.aside{
+  min-width: 320px;
+  max-width: 320px;
+  position: relative;
+  margin: 0 30px 0 0;
+  @media screen and (max-width: 1024px){
+    max-width: 100%;
+    min-width: auto;
+    margin: 0 0;
+  }
+}
+
+
+//aside
+@import "page3/_anchors";
+@import "page3/_top-casino";
+
+//main
+@import "page3/_casino";
+@import "page21/_all-complaint";

@@ -57,6 +57,16 @@
       }
     }
 
+    &-cancel {
+      .complaint__item-img {
+        background: $red;
+      }
+
+      .complaint__item-title {
+        color: $red;
+      }
+    }
+
 
     &-none{
       .complaint__item-img{
