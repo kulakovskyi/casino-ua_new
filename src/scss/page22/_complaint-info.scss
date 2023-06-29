@@ -1,12 +1,15 @@
 .complaint-info{
-  padding: 25px 15px;
-  background: $white;
-  border-radius: 20px;
+
   margin: 0 0 20px 0;
+  &__list{
+    padding: 20px 15px;
+    background: $white;
+    border-radius: 20px;
+  }
   &__title{
     font-family: $font-firs-semb;
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 35px;
     letter-spacing: 0.34px;
     color: $blue-dark;
     margin: 0 0 10px 0;
@@ -25,13 +28,17 @@
       img{
         display: inline-block;
         max-width: 20px;
-        margin: 0 8px 0 0;
+        margin: 0 2px 0 0;
       }
     }
     &-right{
       color: $blue;
       a{
         color: $blue;
+        transition: color $transition;
+        &:hover{
+          color: $blue-hover;
+        }
       }
     }
   }
@@ -46,5 +53,9 @@
 @media screen and (max-width: 650px) {
   .complaint-info{
     margin: 0 auto 30px;
+    &__title{
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

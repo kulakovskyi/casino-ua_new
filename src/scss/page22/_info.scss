@@ -5,8 +5,24 @@
   padding: 44px;
   &__title{
     text-align: center;
+    margin: 0 0 5px 0;
+    @media screen and (max-width: 650px) {
+      margin: 0 0 10px 0;
+    }
+  }
+  &__text{
+    font-family: $font-firs-reg;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: $blue-dark;
+    @media screen and (max-width: 650px) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
   @media screen and (max-width: 650px) {
     padding: 40px 20px;
   }
 }
+

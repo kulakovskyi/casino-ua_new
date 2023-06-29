@@ -219,8 +219,8 @@
 
         &-img{
           display: inline-block;
-          width: 25px;
-          height: 20px;
+          width: 28px;
+          height: 23px;
           background: url("../img/page22/img-svg.svg") no-repeat center/contain;
           cursor: pointer;
         }
@@ -247,7 +247,7 @@
 
       &-submit{
         background: transparent;
-        max-width: 40px;
+        max-width: 30px;
         transition: transform .3s ease;
         &:hover{
           transform: translateX(3px);
