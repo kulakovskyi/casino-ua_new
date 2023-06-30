@@ -1,0 +1,86 @@
+<section class="fall">
+        <div class="supply">
+            <div class="supply__wrapper">
+                <div class="supply__title">Заполните форму подачи жалобы</div>
+                <form action="#" class="supply__form" novalidate>
+                    <div class="supply__form-row">
+                        <div class="supply__form-item">
+                            <label for="name" class="supply__form-label">Название жалобы</label>
+                            <input type="text" class="supply__form-input js-input" name="name" id="name"
+                                   placeholder="Название жалобы">
+                        </div>
+                        <div class="supply__form-item">
+                            <label for="casino-id" class="supply__form-label">Выбор казино</label>
+                            <div class="supply__form-select-wrap">
+                                <select name="casino" id="casino-id" class="supply__form-select">
+                                    <option selected disabled value="">--Выбрать--</option>
+                                    <option class="supply__form-option" value="Favbet">Favbet</option>
+                                    <option class="supply__form-option" value="Cosmolot">Cosmolot</option>
+                                    <option class="supply__form-option" value="Favbet">Favbet</option>
+                                    <option class="supply__form-option" value="Cosmolot">Cosmolot</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="supply__form-item supply__form-item-textarea">
+                        <label for="textarea" class="supply__form-label">Текст жалобы</label>
+                        <textarea name="textarea" id="textarea" cols="30" rows="6"
+                                  class="supply__form-textarea js-input"
+                                  placeholder="Текст жалобы"></textarea>
+                    </div>
+                    <div class="supply__form-row">
+                        <div class="supply__form-item">
+                            <label for="theme-id" class="supply__form-label">Тема жалобы</label>
+                            <div class="supply__form-select-wrap">
+                                <select name="theme" id="theme-id" class="supply__form-select theme__select">
+                                    <option selected disabled value="">--Выбрать--</option>
+                                    <option class="supply__form-option" value="money">ДЕНЕЖКА</option>
+                                    <option class="supply__form-option" value="1">Плохо</option>
+                                    <option class="supply__form-option" value="2">Хорошо</option>
+                                    <option class="supply__form-option" value="3">Пойдет</option>
+                                    <option class="supply__form-option" value="4">Не пойдет</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="supply__form-rowTwo">
+                            <input type="number" class="supply__form-number supply__form-input _none" name="number" placeholder="Kоличестко денежек">
+                            <div class="supply__form-item supply__form-item-file">
+                                <button  type="button" id="choose-button" class="supply__form-file">Прикрепить файл</button>
+                                <input type="file" multiple accept="image/*" id="file-input" name="image" class="supply__form-input-file">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="preview" class="preview">
+                    </div>
+                    <div class="supply__form-subtitle">Эта информация не будет видна</div>
+                    <div class="supply__form-row">
+                        <div class="supply__form-item">
+                            <label for="nickname" class="supply__form-label">Никнейм в этом казино</label>
+                            <input type="text" class="supply__form-input js-input" name="nickname" id="nickname"
+                                   placeholder="Никнейм в этом казино">
+                        </div>
+                        <div class="supply__form-item">
+                            <label for="mail" class="supply__form-label">Емейл в этом казино</label>
+                            <input type="email" class="supply__form-input js-input js-email" name="mail" id="mail"
+                                   placeholder="Емейл в этом казино">
+                        </div>
+                    </div>
+                    <div class="supply__form-row-last">
+                        <div class="supply__form-check">
+                            <input type="checkbox" class="supply__form-checkbox js-check" id="checkbox"
+                                   name="checkbox">
+                            <label for="checkbox" class="supply__form-check-label"></label>
+                            <div class="supply__form-check-text">I, the sender, confirm that the above information
+                                is true and correct and that my shipment does <a href="#">Conditions of Carriage</a>.
+                            </div>
+                        </div>
+                        <div class="supply__form-on">
+                            <button type="submit" class="supply__form-submit">Подать жалобу</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</section>
