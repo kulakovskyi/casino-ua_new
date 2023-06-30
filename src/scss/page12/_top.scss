@@ -64,6 +64,7 @@
       }
     }
     &-btn{
+      position: relative;
       padding-top: 2px;
       font-family: $font-firs-reg;
       background: transparent;
@@ -79,6 +80,36 @@
       border: 2px solid $green-white;
       border-radius: 10px;
       transition: $transition;
+      &-left{
+        &::after{
+          content: '';
+          position: relative;
+          top: -1.5px;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          transform: rotate(90deg);
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top: 9px solid #0450FF;
+          border-radius: 4px;
+        }
+      }
+      &-right{
+        &::after{
+          content: '';
+          position: relative;
+          top: -1.5px;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          transform: rotate(-90deg);
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top: 9px solid #0450FF;
+          border-radius: 4px;
+        }
+      }
       &:hover{
         border: 2px solid $blue;
       }

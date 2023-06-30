@@ -195,6 +195,9 @@
         font-size: 15px;
         line-height: 20px;
         transition: color $transition;
+        @media screen and (max-width: 1250px) {
+          font-size: 14px;
+        }
         &:hover{
           color: $white-hover;
         }
@@ -291,9 +294,10 @@
   @media (max-width: 1250px){
     .menu-list{
       .menu-item{
+        &:nth-child(9),
         &:nth-child(8),
-        &:nth-child(7),
-        &:nth-child(6){
+        &:nth-child(6),
+        &:nth-child(7){
           .sub-menu{
             left: auto;
             right: 0;
