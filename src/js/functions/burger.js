@@ -1,18 +1,83 @@
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".header__bottom");
 const body = document.querySelector("body");
-const headerCabinetBtnMob = document.querySelector('.header__cabinet-mob');
-const headerBtnsCabinet = document.querySelector('.header__btns');
 
-iconMenu.addEventListener("click", function (e) {
-  iconMenu.classList.toggle("_active");
-  menuBody.classList.toggle("_active");
-  body.classList.toggle("_lock");
-});
 
-headerCabinetBtnMob.addEventListener('click', ()=>{
+if(body.classList.contains('in-cabinet')){
+  const headerDropMenuCabinet = document.querySelector('.header__cabinet-save');
+  const headerCabinetBtnMob = document.querySelector('.header__cabinet-mob-user');
+  function burgerMain() {
+    iconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
+  }
+  function burgerMainRemove() {
+    iconMenu.classList.remove("_active");
+    menuBody.classList.remove("_active");
+  }
+  iconMenu.addEventListener("click", function (e) {
+    if (headerDropMenuCabinet.classList.contains('_open')) headerDropMenuCabinet.classList.remove('_open');
+    burgerMain();
+    let examinationOpenMenu = headerDropMenuCabinet.classList.contains('_open')
+    let examinationOpenMenuMain = menuBody.classList.contains('_active')
+    if(examinationOpenMenuMain || examinationOpenMenu){
+      body.classList.add('_lock')
+    } else {
+      body.classList.remove('_lock')
+    }
+  });
+
+  headerCabinetBtnMob.addEventListener('mouseenter', mouseEnterElem);
+  headerCabinetBtnMob.addEventListener('mouseleave', mouseLeave);
+  headerDropMenuCabinet.addEventListener('mouseleave', mouseLeave);
+  headerDropMenuCabinet.addEventListener('mouseenter', mouseEnterElem);
+  function mouseLeave(e) {
+    headerDropMenuCabinet.classList.remove('_open');
+  }
+  function mouseEnterElem (){
+    headerDropMenuCabinet.classList.add('_open');
+  }
+
+  if (window.screen.width <= 1024) {
+    headerCabinetBtnMob.removeEventListener('mouseenter', mouseEnterElem);
+    headerCabinetBtnMob.removeEventListener('mouseleave', mouseLeave);
+    headerDropMenuCabinet.removeEventListener('mouseleave', mouseLeave);
+    headerDropMenuCabinet.removeEventListener('mouseenter', mouseEnterElem);
+
+
+    headerCabinetBtnMob.addEventListener('click', () => {
+
+      headerDropMenuCabinet.classList.toggle('_open');
+      if (menuBody.classList.contains('_active')) {
+        headerDropMenuCabinet.classList.add('_open');
+        burgerMainRemove();
+      }
+      let examinationOpenMenu = headerDropMenuCabinet.classList.contains('_open')
+      let examinationOpenMenuMain = menuBody.classList.contains('_active')
+      if(examinationOpenMenuMain || examinationOpenMenu){
+        body.classList.add('_lock')
+      } else {
+        body.classList.remove('_lock')
+      }
+
+    });
+  }
+
+
+} else {
+  const headerBtnsCabinet = document.querySelector('.header__btns');
+  const headerOutBtns = document.querySelector('.header__cabinet-mob')
+  iconMenu.addEventListener("click", function (e) {
+    iconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
+    body.classList.toggle("_lock");
+  });
+  headerOutBtns.addEventListener('click', ()=>{
   headerBtnsCabinet.classList.toggle('_open')
 });
+}
+
+
+
 
 
 const menuItems = document.querySelectorAll('.menu-item');
