@@ -1,166 +1,283 @@
-//casino-slot block     SHORT-2
-.casino-slot {
-  &._onWhite{
-    padding: 15px;
-    border-radius: 8px;
-    @media screen and (max-width: 350px){
-      padding: 5px;
-    }
-  }
-  background: $pink;
-
+.casinos-bests{
+  overflow: hidden;
   margin: 0 0 20px 0;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-
-
-  &__link {
-    font-family: $font-popins-semb;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: $white;
-    align-self: center;
-    text-align: center;
-    padding: 19px 85px 17px;
-  }
-
-
-  &__list {
+  &__list{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 15px;
-    margin: 0 0 30px 0;
+    grid-template-columns: 100%;
+    gap: 10px;
   }
 
-  &__item {
+  &__item{
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 12px;
-    background: $white;
-    position: relative;
-    max-width: 330px;
-
-    &-info {
-      position: absolute;
-      cursor: pointer;
-      top: 20px;
-      right: 20px;
-      padding: 10.5px;
-
-      &-text {
-        display: none;
-        padding: 15px;
-        border-radius: 8px;
-        background: $burgundyBtn;
-        color: $white;
-        width: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    &-wrap{
+      min-width: 530px;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: $white;
+      padding: 15px 25px 15px 15px;
+      border-right: 2px solid $grey-bg-section;
+      &::after,
+      &::before{
         position: absolute;
-        top: 50px;
-        right: 0;
+        width: 25px;
+        height: 25px;
+        background: $grey-bg-section;
+        border-radius: 50%;
+
+      }
+      &::after{
+        content: '';
+        right: -13px;
+        top: -13px;
+      }
+      &::before{
+        content: '';
+        right: -13px;
+        bottom: -13px;
+      }
+    }
+    &-image{
+      max-width: 190px;
+      min-width: 190px;
+      margin: 0 15px 0 0;
+      position: relative;
+      &-link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      img{
+        min-width: 100%;
+        border-radius: 14px;
+      }
+    }
+    &-cont{
+      flex: 1 1 auto;
+      margin: 0 15px 0 0;
+    }
+    &-title{
+      font-family: $font-firs-semb;
+      color: $blue-dark;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.01em;
+      margin: 0 0 3px 0;
+    }
+    &-info{
+      display: flex;
+      align-items: center;
+    }
+    &-star{
+      display: flex;
+      align-items: center;
+      img{
+        max-width: 13px;
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-text{
+        margin-top: 2px;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.02em;
+        color: $blue-dark;
+      }
+    }
+    &-top{
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      img{
+        max-width: 11px;
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-text{
+        margin-top: 2px;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.02em;
+        color: $green;
+      }
+    }
+    &-buttons{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+      max-width: 120px;
+      min-width: 120px;
+    }
+    &-btn{
+      font-size: 13px;
+      line-height: 20px;
+      border-radius: 8px;
+      padding: 9px 10px 8px;
+      text-align: center;
+      width: 100%;
+    }
+    &-bonus{
+      padding: 25px 20px;
+      background: $white;
+      max-width: 280px;
+      &-title{
+        font-family: $font-firs-semb;
+        color: $green;
         font-size: 12px;
         line-height: 15px;
-
-        &._show {
-          display: block;
-        }
+        text-transform: uppercase;
       }
-    }
-
-    &-image {
-      max-width: 160px;
-      margin: 0 0 10px 0;
-
-      img {
-        border-radius: 8px;
+      &-subtitle{
+        font-family: $font-firs-semb;
+        color: $blue;
+        font-size: 18px;
+        line-height: 19px;
+        margin: 0 0 8px 0;
+        text-transform: uppercase;
       }
-    }
-
-    &-title {
-      flex: 1 1 auto;
-      font-size: 17px;
-      line-height: 26px;
-      letter-spacing: -0.004em;
-      color: $black-one;
-      margin: 0 0 2px 0;
-    }
-
-    &-licensed {
-      display: flex;
-      color: $blue;
-      font-size: 12px;
-      line-height: 15px;
-      letter-spacing: -0.004em;
-      margin: 0 0 20px 0;
-
-      &-one {
-        margin: 0 8px 0 0;
+      &-text{
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        color: $green;
       }
-    }
-
-    &-link {
-      align-self: flex-start;
-      display: inline-block;
-      min-width: 160px;
-      text-align: center;
-      padding: 12px 30px 10px;
-      font-size: 15px;
-      line-height: 20px;
     }
   }
-
-
 }
 
-@media screen and (max-width: 1240px) {
-  .casino-slot {
-    &__list {
-      display: grid;
-      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
-      gap: 15px;
-      margin: 0 0 30px 0;
+@media screen and (max-width: 1200px){
+  .casinos-bests{
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-
-    &__item {
-      max-width: 100%;
+    &__item{
+      max-width: 312px;
+      min-width: 312px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      overflow: hidden;
+      &-cont{
+        margin: 0 0 15px 0;
+      }
+      &-wrap{
+        min-width: auto;
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+        background: $white;
+        padding: 15px 15px 25px;
+        border-right: none;
+        border-bottom: 2px solid $grey-bg-section;
+        &::after,
+        &::before{
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background: $grey-bg-section;
+          border-radius: 50%;
+          bottom: -13px;
+          top: auto;
+          right: auto;
+          left: auto;
+        }
+        &::after{
+          content: '';
+          left: -13px;
+        }
+        &::before{
+          content: '';
+          right: -13px;
+        }
+      }
+      &-image{
+        margin: 0 0 15px 0;
+        max-width: 100%;
+        img{
+          border-radius: 14px;
+        }
+      }
+      &-buttons{
+        min-width: auto;
+        max-width: 100%;
+        flex-direction: row;
+      }
+      &-btn{
+        text-align: center;
+        width: calc(50% - 3px);
+        transition: background-color $transition;
+        &-white{
+          margin: 0 6px 0 0;
+        }
+      }
+      &-bonus{
+        flex: 1 1 auto;
+        min-width: auto;
+        max-width: 100%;
+        padding: 25px 20px;
+        background: $white;
+      }
     }
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .casino-slot {
-    &__list {
-      grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+  .casinos-bests{
+    margin: 0 0 20px 0;
+    &__list{
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: scroll;
     }
-
-  }
-}
-
-@media screen and (max-width: 830px) {
-  .casino-slot {
-    &__list {
-      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
-    }
-
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .casino-slot {
-
-    &__link {
-      width: calc(100% - 30px);
-
-    }
-
-    &__list {
-      grid-template-columns: 100%;
-      gap: 15px;
+    &__item{
+      min-width: 312px;
+      max-width: 312px;
     }
   }
 }
+
+.casinos-bests{
+  &._onWhite{
+    .casinos-bests__item{
+      border: 2px solid $grey-bg-section;
+
+      @media screen and (max-width: 1200px){
+        max-width: 290px;
+        min-width: 290px;
+      }
+      @media screen and (max-width: 1070px){
+        max-width: 100%;
+        min-width: 100%;
+      }
+      @media screen and (max-width: 1024px){
+        max-width: 312px;
+        min-width: 312px;
+      }
+    }
+    .casinos-bests__list{
+      gap: 10px;
+      @media screen and (max-width: 1070px){
+        display: grid;
+        gap: 10px;
+        grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+      }
+      @media screen and (max-width: 1024px){
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 15px;
+      }
+    }
+  }
+}
+

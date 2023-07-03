@@ -21,7 +21,7 @@
     font-size: 15px;
     line-height: 25px;
     text-align: center;
-    color: $grey-text;
+    color: $blue-dark;
     margin: 0 0 25px 0;
   }
 
@@ -34,14 +34,14 @@
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.04em;
-    color: $red;
-    border: 1px solid $red;
+    //color: $red;
+    //border: 1px solid $red;
     border-radius: 8px;
     transition: background .3s ease;
 
-    &:hover {
-      background: $grey-bg-section;
-    }
+    //&:hover {
+    //  background: $grey-bg-section;
+    //}
   }
 }
 

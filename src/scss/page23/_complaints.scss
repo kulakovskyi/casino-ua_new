@@ -41,15 +41,16 @@
       text-align: center;
       letter-spacing: -0.004em;
       color: $blue-dark;
+
       border-radius: 7px;
       transition: color .3s ease, .3s background-color;
       &:hover{
-        color: $blue;
-        background: rgba(4, 80, 255, 0.2);
+        color: $white;
+        background: $blue;
       }
       &._active{
-        color: $blue;
-        background: rgba(4, 80, 255, 0.2);
+        background: $blue;
+        color: $white;
       }
     }
   }

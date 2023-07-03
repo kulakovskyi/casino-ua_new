@@ -4,11 +4,20 @@
 @include('partials/short3/head.html')
 
 <body class="body">
+@include('partials/general-block/header.html')
+
+@include('partials/page2/casino.html')
+
 <div class="wrapper">
-    @include('partials/short3/best.html')
+    <div class="wrapper__cont">
+        <main class="main">
+            @include('partials/short3/best.html')
+        </main>
+        <aside class="aside">
+            @include('partials/page2/top-casino.html')
+        </aside>
+    </div>
 </div>
 </body>
 
 </html>
-
-

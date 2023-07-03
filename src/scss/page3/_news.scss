@@ -14,11 +14,13 @@
     border-radius: 14px;
     margin: 0 0 20px 0;
   }
-  a{
-    color: $blue-dark;
-    text-decoration: underline;
-    &:hover{
-      text-decoration: none;
+  p{
+    a{
+      color: $blue-dark;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
     }
   }
   h2 {

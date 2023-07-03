@@ -31,13 +31,7 @@
     min-width: 100%;
     border-radius: 14px;
   }
-  a{
-    color: $blue-dark;
-    text-decoration: underline;
-    &:hover{
-      text-decoration: none;
-    }
-  }
+
   h2 {
     font-family: $font-firs-semb;
     font-size: 28px;
@@ -78,6 +72,16 @@
     line-height: 30px;
     margin: 0 0 20px 0;
     color: $blue-dark;
+  }
+
+  p{
+    a{
+      color: $blue-dark;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
   }
 
   ol {

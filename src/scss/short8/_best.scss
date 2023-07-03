@@ -1,0 +1,161 @@
+.casino-payments{
+  overflow: hidden;
+  margin: 0 0 20px 0;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item{
+    max-width: 312px;
+    min-width: 312px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    position: relative;
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    background: $white;
+    padding: 15px;
+    &-wrap{
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: relative;
+      background: $white;
+    }
+    &-cont{
+      margin: 0 0 15px 0;
+    }
+    &-image{
+      max-width: 100%;
+      margin: 0 0 10px 0;
+
+      img{
+        border-radius: 14px;
+        min-width: 100%;
+      }
+    }
+    &-title{
+      font-family: $font-firs-reg;
+      color: $blue-dark;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.01em;
+      margin: 0 0 3px 0;
+    }
+    &-info{
+      font-size: 13px;
+      line-height: 17px;
+      color: $green;
+      span{
+        font-family: $font-firs-semb;
+        color: $blue-dark;
+      }
+    }
+    &-buttons{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &-btn{
+      font-size: 13px;
+      line-height: 20px;
+      border-radius: 8px;
+      padding: 9px 34px 8px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .casino-payments{
+    margin: 0 0 20px 0;
+    &__item{
+      max-width: 312px;
+      min-width: 312px;
+      flex-direction: column;
+      &:not(:last-child){
+        margin: 0;
+      }
+      &-wrap{
+        flex-direction: column;
+        align-items: stretch;
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        background: $white;
+      }
+      &-cont{
+        margin: 0 0 15px 0;
+      }
+      &-image{
+        max-width: 100%;
+        margin: 0 0 10px 0;
+        img{
+          min-width: 100%;
+        }
+      }
+      &-buttons{
+        margin: 0;
+        flex-direction: row;
+        width: 100%;
+      }
+      &-btn{
+        width: 100%;
+      }
+
+    }
+    &__list{
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
+}
+
+.casino-payments{
+  overflow: hidden;
+  margin: 0 0 20px 0;
+
+  &._onWhite{
+    .casino-payments__list{
+      gap: 10px;
+      @media screen and (max-width: 1070px){
+        display: grid;
+        grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+      }
+      @media screen and (max-width: 1024px){
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 15px;
+      }
+
+    }
+    .casino-payments__item{
+      max-width: 290px;
+      min-width: 290px;
+      border: 2px solid $grey-bg-section;
+      @media screen and (max-width: 1070px){
+        max-width: 100%;
+        min-width: 100%;
+      }
+      @media screen and (max-width: 1024px){
+        max-width: 312px;
+        min-width: 312px;
+      }
+    }
+
+  }
+
+
+}

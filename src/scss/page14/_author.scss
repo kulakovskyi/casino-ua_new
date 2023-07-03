@@ -65,7 +65,7 @@
     font-family: $font-firs-reg;
     margin-top: 3px;
     font-size: 15px;
-    color: $green;
+    color: $green-lighthouse;
     @media screen and (max-width: 650px) {
       font-size: 13px;
 
@@ -75,7 +75,7 @@
 
     &-title{
       font-family: $font-firs-reg;
-      color: $green;
+      color: $green-lighthouse;
       font-size: 15px;
       margin: 0 0 10px 0;
     }
