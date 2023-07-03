@@ -1,24 +1,6 @@
 .casino-comparison{
   overflow: hidden;
   margin: 0 0 20px 0;
-  &__title{
-    display: flex;
-    align-items: center;
-    margin: 0 0 20px 0;
-    font-family: $font-firs-semb;
-    color: $blue-dark;
-    font-size: 32px;
-    line-height: 35px;
-    letter-spacing: -0.01em;
-    span{
-      display: inline-block;
-      margin: 0 15px 0 0;
-    }
-    a{
-      display: inline-block;
-      max-width: 40px;
-    }
-  }
 
   &__list{
     max-width: 985px;
@@ -78,8 +60,17 @@
       padding: 0 20px;
       max-width: 100%;
       margin: 0 0 15px 0;
+      position: relative;
+      &-link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
 
       img{
+
         border-radius: 14px;
         min-width: 100%;
       }
