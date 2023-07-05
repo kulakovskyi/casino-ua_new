@@ -6,7 +6,7 @@
   position: relative;
   z-index: 10;
 
-  &__container{
+  &__wrapp{
     display: flex;
     flex-direction: column;
   }
@@ -268,6 +268,7 @@
     display: inline-block;
     font-size: 15px;
     line-height: 17px;
+    margin: 0 0 30px 0;
     padding: 15px 110px 14px;
   }
 }
@@ -316,7 +317,7 @@
   .best{
 
     &__all-link{
-      margin: 0 15px;
+      margin: 0 15px 30px;
       width: calc(100% - 30px);
       align-self: stretch;
       text-align: center;

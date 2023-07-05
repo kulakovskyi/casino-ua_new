@@ -46,9 +46,9 @@
     font-size: 15px;
     line-height: 17px;
     padding: 15px 110px 14px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 0 auto;
     @media screen and (max-width: 650px) {
-        margin: 0 15px 30px 15px;
+        margin: 0 15px 0 15px;
         max-width: 100%;
         width: calc(100% - 30px);
         align-self: stretch;
@@ -98,11 +98,14 @@
   }
 
   &__row {
-    padding: 0 15px;
+    padding: 0;
     position: relative;
     display: flex;
     //align-items: flex-start;
     justify-content: space-between;
+    @media screen and (max-width: 1350px) {
+      padding: 0 15px;
+    }
   }
 
   &__wrap {
@@ -309,7 +312,7 @@
 
     &__wrap {
       width: 100%;
-      padding: 0px 15px;
+      padding: 0;
       border-radius: 0;
     }
 
@@ -592,7 +595,7 @@
     }
 
     &__wrap {
-      margin: 0 0 20px 0;
+      margin: 0 0 0;
       max-width: 100%;
     }
   }
@@ -602,10 +605,6 @@
 @media screen and (max-width: 650px) {
   .news {
     padding: 35px 0;
-
-    &__row{
-      padding: 0;
-    }
 
     &__item{
       max-width: 290px;
@@ -636,9 +635,9 @@
       padding: 0;
     }
 
-    &__wrap {
-      padding: 0 15px;
-    }
+    //&__wrap {
+    //  padding: 0 15px;
+    //}
   }
 
 
