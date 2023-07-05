@@ -276,16 +276,16 @@
 @media screen and (max-width: 1350px) {
   .best{
     &__container{
-      padding: 0;
-    }
-    &__title,
-    &__text,
-    &__list{
       padding: 0 15px;
     }
+
     &__list{
       flex-wrap: nowrap;
       overflow-x: scroll;
+      padding: 0 15px;
+      position: relative;
+      left: -15px;
+      width: calc(100% + 30px);
     }
     &__item{
       min-width: 315px;
@@ -298,6 +298,9 @@
         overflow-x: scroll;
         padding: 0 15px;
         margin: 0 0 25px 0;
+        position: relative;
+        left: -15px;
+        width: calc(100% + 30px);
       }
 
     }
