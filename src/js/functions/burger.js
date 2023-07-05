@@ -64,20 +64,36 @@ if(body.classList.contains('in-cabinet')){
 
 
 } else {
-  const headerBtnsCabinet = document.querySelector('.header__btns');
+  const headerBtnsCabinet = document.querySelector('.header__btns-wrap');
+  const headerBtnsCabinetClose = document.querySelector('.header__btns-close');
   const headerOutBtns = document.querySelector('.header__cabinet-mob')
   iconMenu.addEventListener("click", function (e) {
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
     body.classList.toggle("_lock");
   });
+  headerBtnsCabinetClose.addEventListener('click', ()=>{
+    headerBtnsCabinet.classList.remove('_open')
+    if(!menuBody.classList.contains('_active')){
+      body.classList.remove("_lock");
+    }
+  })
+  headerBtnsCabinet.addEventListener('click', e => {
+    if(e.target === headerBtnsCabinet){
+      if(!menuBody.classList.contains('_active')){
+        body.classList.remove("_lock");
+      }
+      headerBtnsCabinet.classList.remove('_open')
+    }
+
+  })
   headerOutBtns.addEventListener('click', ()=>{
   headerBtnsCabinet.classList.toggle('_open')
+    if(!menuBody.classList.contains('_active')){
+      body.classList.toggle("_lock");
+    }
 });
 }
-
-
-
 
 
 const menuItems = document.querySelectorAll('.menu-item');
