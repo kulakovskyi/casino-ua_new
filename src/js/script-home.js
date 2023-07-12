@@ -19,8 +19,6 @@ import { slotItem } from './components/home/slotItem-Component.js';
 //bonus btn show for information
 import { bonusItem } from './components/home/bonusItem-Component.js';
 
-//News Tabs sticky
-import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
 
 
 

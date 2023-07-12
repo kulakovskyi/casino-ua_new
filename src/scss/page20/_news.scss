@@ -1,14 +1,10 @@
-.news{
+
+
+.article {
   background: $white;
   border-radius: 20px;
   padding: 50px;
   margin: 0 0 20px 0;
-  &__title{
-    margin: 0 0 10px 0;
-  }
-}
-
-.news__blog {
   >img{
     min-width: 100%;
     border-radius: 14px;
@@ -210,63 +206,17 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .news {
+  .article {
     padding: 30px 30px 20px;
     border-radius: 22px;
+    margin: 0 0 20px 0;
+    max-width: 100%;
 
-    &__row {
-      flex-direction: column;
-    }
-
-    &__blog {
-      margin: 0 0 20px 0;
-      max-width: 100%;
-    }
   }
 
 }
 
 @media screen and (max-width: 650px) {
-  .news {
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    margin: 0 0 30px 0;
-
-    &__row{
-      padding: 0;
-    }
-
-    &__item{
-      max-width: 290px;
-      min-width: 290px;
-      padding: 10px;
-      &-text{
-        font-size: 15px;
-        line-height: 20px;
-      }
-
-    }
-
-    &__title{
-      margin: 0 0 10px 0;
-      &-link{
-        display: none;
-      }
-    }
-
-    &__text{
-      padding: 0 15px;
-      font-size: 13px;
-      line-height: 22px;
-    }
-
-    &__container {
-      padding: 0;
-    }
-
-  }
-
 
   .content-table {
     table {
@@ -278,7 +228,11 @@
     }
   }
 
-  .news__blog {
+  .article {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    margin: 0 0 30px 0;
     h2 {
       font-size: 20px;
       line-height: 30px;

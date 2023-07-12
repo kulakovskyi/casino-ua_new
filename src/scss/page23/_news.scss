@@ -1,4 +1,4 @@
-.news {
+.article {
   padding: 55px 0 55px 0;
   background: $grey-bg-section;
   border-radius: 50px;
@@ -241,7 +241,7 @@
 }
 
 
-.news__blog {
+.article__blog {
   >img{
     margin: 0 0 20px 0;
     min-width: 100%;
@@ -442,7 +442,7 @@
 
 
 @media screen and (max-width: 1024px) {
-  .news {
+  .article {
     padding: 35px 0;
     border-radius: 22px;
     &__row {
@@ -458,7 +458,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .news {
+  .article {
     padding: 35px 0;
 
     &__row{
@@ -510,7 +510,7 @@
     }
   }
 
-  .news__blog {
+  .article__blog {
     h2 {
       font-size: 20px;
       line-height: 30px;
