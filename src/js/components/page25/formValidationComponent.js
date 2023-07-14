@@ -19,9 +19,7 @@ themeSelect.addEventListener('change', () => {
         numberInput.value > 100000 ? numberInput.value = 100000 : false
     })
 
-    console.log(themeSelect.value)
     themeSelect.value === 'money' ? numberInput.classList.remove('_none') : numberInput.classList.add('_none')
-
 })
 
 
@@ -36,29 +34,36 @@ formPopupTwo.addEventListener("submit", (event) => {
     //массив из всех пустых инпутов и селектов
     emptyInputs = Array.from(textInputs).filter((input) => input.value === "");
     emptySelects = Array.from(selects).filter((select) => select.selectedIndex === 0);
-    //проверка инпута на пустоту
-    textInputs.forEach(function (input) {
-        (input.value === "") ? input.classList.add("_error") : input.classList.remove("_error")
-    });
 
-    //проверка селектов на выбраность
-    selects.forEach(select => {
-        let selNum = select.selectedIndex;
-        (selNum === 0) ? select.classList.add('_error') : select.classList.remove('_error')
-    })
+    let allInputs = formPopupTwo.querySelectorAll('.js-input, .supply__form-select, .js-email')
+    if(themeSelect.value === 'money'){
+        allInputs = formPopupTwo.querySelectorAll('.js-input, .supply__form-select, .js-email, .supply__form-number')
+    }
+    if(window.innerWidth <= 1024){
+        for (let i = 0; i < allInputs.length; i++) {
+            const input = allInputs[i];
+            if (!input.value) {
+                scrollInto(input);
+                break;
+            }
+        }
+    }
+
+    for (let i = 0; i < allInputs.length; i++) {
+        const input = allInputs[i];
+        if (!input.value) {
+            input.classList.add('_error')
+        }
+        if (input.value) {
+            input.classList.remove('_error')
+        }
+    }
 
     //проверка чекбокса на пустоту
     if (!checkBox.checked) {
         labelCheck.classList.add("_error");
     } else {
         labelCheck.classList.remove("_error");
-    }
-
-    //проверка числа денег
-    if(themeSelect.value === 'money' && numberInput.value === ''){
-        numberInput.classList.add('_error')
-    } else {
-        numberInput.classList.remove('_error')
     }
 
     //проверка имейла
@@ -69,6 +74,16 @@ formPopupTwo.addEventListener("submit", (event) => {
     } else {
         inputEmail.classList.remove('error');
     }
+
+    function scrollInto(element){
+        const elementPosition = element.getBoundingClientRect().top;
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollToPosition = elementPosition + scrollPosition - 10;
+        window.scrollTo({
+            top: scrollToPosition,
+            behavior: 'smooth'
+        });}
+
 
     //блокировка кнопки до момента, пока все инпуты не будут заполнены
     if (emptyInputs.length !== 0 || !checkBox.checked || emptySelects.length !== 0 || (themeSelect.value === 'money' && numberInput.value === '')) {
